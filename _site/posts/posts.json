@@ -1,0 +1,19 @@
+[
+  {
+    "path": "posts/2021-09-05-buildingdistill/",
+    "title": "Building a {distill} website",
+    "description": "How I built this site using {distill}",
+    "author": [
+      {
+        "name": "Unknown",
+        "url": {}
+      }
+    ],
+    "date": "2021-09-05",
+    "categories": [],
+    "contents": "\r\nThis is where I will talk about building this website.\r\n\r\n\r\n\r\n",
+    "preview": "posts/2021-09-05-buildingdistill/ame.jpeg",
+    "last_modified": "2021-09-05T19:37:12-05:00",
+    "input_file": {}
+  }
+]

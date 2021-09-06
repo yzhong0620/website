@@ -1,0 +1,21 @@
+---
+title: "Building a {distill} website"
+description: |
+  How I built this site using {distill}
+author:
+  - name: Unknown
+date: 09-05-2021
+preview: ame.jpeg
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+This is where I will talk about building this website.
+
+
