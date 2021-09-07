@@ -5,15 +5,15 @@
     "description": "How I built this site using {distill}",
     "author": [
       {
-        "name": "Unknown",
+        "name": "Yunyang Zhong",
         "url": {}
       }
     ],
     "date": "2021-09-05",
     "categories": [],
-    "contents": "\r\nThis is where I will talk about building this website.\r\n\r\n\r\n\r\n",
+    "contents": "\r\nThis is where I will talk about building this website.\r\n\r\n\r\n\r\n\r\n\r\n    Downloading file 1 of 13: `circuits.csv`\r\n    Downloading file 2 of 13: `constructor_results.csv`\r\n    Downloading file 3 of 13: `constructor_standings.csv`\r\n    Downloading file 4 of 13: `constructors.csv`\r\n    Downloading file 5 of 13: `driver_standings.csv`\r\n    Downloading file 6 of 13: `drivers.csv`\r\n    Downloading file 7 of 13: `lap_times.csv`\r\n    Downloading file 8 of 13: `pit_stops.csv`\r\n    Downloading file 9 of 13: `qualifying.csv`\r\n    Downloading file 10 of 13: `races.csv`\r\n    Downloading file 11 of 13: `results.csv`\r\n    Downloading file 12 of 13: `seasons.csv`\r\n    Downloading file 13 of 13: `status.csv`\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n",
     "preview": "posts/2021-09-05-buildingdistill/ame.jpeg",
-    "last_modified": "2021-09-05T19:37:12-05:00",
-    "input_file": {}
+    "last_modified": "2021-09-07T11:14:37-05:00",
+    "input_file": "buildingdistill.knit.md"
   }
 ]
