@@ -17,5 +17,8 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## About me:
 
+My name is Yunyang [You-in-young] and I am a senior AMS major with Computer Science and Psychology minors.
+
 ## Education:
 
+Macalester College B.A. Expected May 2022

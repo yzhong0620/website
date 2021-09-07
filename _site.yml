@@ -18,3 +18,4 @@ navbar:
     - icon: fa fa-twitter
       href: https://twitter.com/YunyangZhong
 output: distill::distill_article
+theme: "yunyang_theme.css"
