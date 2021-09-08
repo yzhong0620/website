@@ -1,19 +1,19 @@
 [
   {
-    "path": "posts/2021-09-05-buildingdistill/",
-    "title": "Building a {distill} website",
-    "description": "How I built this site using {distill}",
+    "path": "posts/2021-09-07-tidytuesday1/",
+    "title": "Tidy Tuesday #1",
+    "description": "Tidy Tuesday 09/07/21",
     "author": [
       {
         "name": "Yunyang Zhong",
         "url": {}
       }
     ],
-    "date": "2021-09-05",
+    "date": "2021-09-07",
     "categories": [],
-    "contents": "\r\nThis is where I will talk about building this website.\r\n\r\n\r\n\r\n\r\n\r\n    Downloading file 1 of 13: `circuits.csv`\r\n    Downloading file 2 of 13: `constructor_results.csv`\r\n    Downloading file 3 of 13: `constructor_standings.csv`\r\n    Downloading file 4 of 13: `constructors.csv`\r\n    Downloading file 5 of 13: `driver_standings.csv`\r\n    Downloading file 6 of 13: `drivers.csv`\r\n    Downloading file 7 of 13: `lap_times.csv`\r\n    Downloading file 8 of 13: `pit_stops.csv`\r\n    Downloading file 9 of 13: `qualifying.csv`\r\n    Downloading file 10 of 13: `races.csv`\r\n    Downloading file 11 of 13: `results.csv`\r\n    Downloading file 12 of 13: `seasons.csv`\r\n    Downloading file 13 of 13: `status.csv`\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n",
-    "preview": "posts/2021-09-05-buildingdistill/ame.jpeg",
-    "last_modified": "2021-09-07T11:14:37-05:00",
-    "input_file": "buildingdistill.knit.md"
+    "contents": "\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nI created this graph to help answer whether the fastest lap speeds are similar for different races and how frequently the drivers join a race. Because there are over 1000 races and over 800 drivers and I was trying to make a gif, I only focused on races 1-50 to not overwhelm the audience with too much information. fastestLapSpeed is the most important variable for my focus and thus my first step was to remove all missing values. I also changed it to numeric so that it was possible to create a continuous y-axis. y-axis labels were restructured as well to better present the points mostly in the middle of the graph. A scatterplot was chosen since I wanted to underscore the overall trend and clutter of points could help achieve so. From the gif, it seems that the fastest lap speeds fluctuate in different races and that drivers with id 1-50 are the most frequent players.\r\n\r\n\r\n\r\n\r\n",
+    "preview": "posts/2021-09-07-tidytuesday1/ame.jpeg",
+    "last_modified": "2021-09-08T14:18:55-05:00",
+    "input_file": "tidytuesday1.knit.md"
   }
 ]
