@@ -1,4 +1,4 @@
 ---
-title: "blog"
+title: "Yunyang's Blog"
 listing: posts
 ---
