@@ -4,8 +4,8 @@ description: |
   STAT456 - Advanced Data Science in R
 output_dir: "_site"
 navbar:
-  logo:
-    image: yunyangzhong.jpg
+  # logo:
+  #   image: yunyangzhong.jpg
   right:
     - text: "About"
       href: index.html
