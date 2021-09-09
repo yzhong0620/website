@@ -15,7 +15,7 @@ navbar:
       href: https://github.com/yzhong0620
     - icon: fa fa-linkedin
       href: https://www.linkedin.com/in/yunyang-zhong/
-    - icon: fa fa-twitter
-      href: https://twitter.com/YunyangZhong
+    # - icon: fa fa-twitter
+    #   href: https://twitter.com/YunyangZhong
 output: distill::distill_article
 theme: "yunyang_theme.css"
