@@ -13,7 +13,7 @@
     "categories": [],
     "contents": "\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nI created this graph to help answer whether the fastest lap speeds are similar for different races and how frequently the drivers join a race. Because there are over 1000 races and over 800 drivers and I was trying to make a gif, I only focused on races 1-50 to not overwhelm the audience with too much information. fastestLapSpeed is the most important variable for my focus and thus my first step was to remove all missing values. I also changed it to numeric so that it was possible to create a continuous y-axis. y-axis labels were restructured as well to better present the points mostly in the middle of the graph. A scatterplot was chosen since I wanted to underscore the overall trend and clutter of points could help achieve so. From the gif, it seems that the fastest lap speeds fluctuate in different races and that drivers with id 1-50 are the most frequent players.\r\n\r\n\r\n\r\n\r\n",
     "preview": "posts/2021-09-07-tidytuesday1/ame.jpeg",
-    "last_modified": "2021-09-08T14:18:55-05:00",
-    "input_file": "tidytuesday1.knit.md"
+    "last_modified": "2021-09-08T14:18:56-05:00",
+    "input_file": {}
   }
 ]
