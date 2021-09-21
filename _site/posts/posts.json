@@ -11,9 +11,9 @@
     ],
     "date": "2021-09-21",
     "categories": [],
-    "contents": "\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nI created this graph to help answer which songs rank No.1 for more than 10 weeks. Weeks ranked No.1 is the most important variable for my focus and thus my first step was to remove songs whose week position is not 1. Then I grouped by song_id to compute the total weeks ranked No.1 for each song. y-axis was restructued to rank the songs from the longest to the shortest time. Old Town Road ranked No.1 for the longest time (almost 20 weeks), followed by One Sweet Day and Despacito for 16 weeks. The total weeks on chart (ranked top 100) is also included. Although Macarena is not in the top 3, it was on chart for the longest time. There seems to be no relationship between weeks on chart and weeks ranked No.1.\r\n\r\n\r\n\r\n\r\n",
-    "preview": "posts/2021-09-17-tidytuesday2/tidytuesday2_files/figure-html5/unnamed-chunk-3-1.png",
-    "last_modified": "2021-09-21T10:12:49-05:00",
+    "contents": "\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nI created this graph to help answer which songs rank No.1 for more than 10 weeks. Weeks ranked No.1 is the most important variable for my focus and thus my first step was to remove songs whose week position is not 1. Then I grouped by song_id to compute the total weeks ranked No.1 for each song. y-axis was restructured to rank the songs from the longest to the shortest time. Old Town Road ranked No.1 for the longest time (almost 20 weeks), followed by One Sweet Day and Despacito for 16 weeks. The total weeks on chart (ranked top 100) is also included. Although Macarena is not in the top 3, it was on chart for the longest time. There seems to be no relationship between weeks on chart and weeks ranked No.1.\r\n\r\n\r\n\r\n\r\n",
+    "preview": "posts/2021-09-17-tidytuesday2/tidy.PNG",
+    "last_modified": "2021-09-21T10:20:51-05:00",
     "input_file": "tidytuesday2.knit.md"
   },
   {

@@ -31,7 +31,7 @@ theme_set(theme_minimal())
 billboard <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2021/2021-09-14/billboard.csv')
 ```
 
-```{r, fig.width=12}
+```{r, fig.width=12, fig.height=14}
 billboard %>% 
   filter(week_position == 1) %>% 
   group_by(song_id) %>% 
@@ -43,4 +43,4 @@ billboard %>%
   geom_col(aes(fill = weeks_on_chart))
 ```
 
-> I created this graph to help answer which songs rank No.1 for more than 10 weeks. Weeks ranked No.1 is the most important variable for my focus and thus my first step was to remove songs whose week position is not 1. Then I grouped by song_id to compute the total weeks ranked No.1 for each song. y-axis was restructued to rank the songs from the longest to the shortest time. Old Town Road ranked No.1 for the longest time (almost 20 weeks), followed by One Sweet Day and Despacito for 16 weeks. The total weeks on chart (ranked top 100) is also included. Although Macarena is not in the top 3, it was on chart for the longest time. There seems to be no relationship between weeks on chart and weeks ranked No.1.
+> I created this graph to help answer which songs rank No.1 for more than 10 weeks. Weeks ranked No.1 is the most important variable for my focus and thus my first step was to remove songs whose week position is not 1. Then I grouped by song_id to compute the total weeks ranked No.1 for each song. y-axis was restructured to rank the songs from the longest to the shortest time. Old Town Road ranked No.1 for the longest time (almost 20 weeks), followed by One Sweet Day and Despacito for 16 weeks. The total weeks on chart (ranked top 100) is also included. Although Macarena is not in the top 3, it was on chart for the longest time. There seems to be no relationship between weeks on chart and weeks ranked No.1.
