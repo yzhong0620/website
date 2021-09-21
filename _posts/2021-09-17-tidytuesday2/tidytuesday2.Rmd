@@ -1,0 +1,46 @@
+---
+title: "Tidy Tuesday #2"
+description: |
+  Tidy Tuesday 09/14/21
+author:
+  - name: Yunyang Zhong
+date: 09-21-2021
+preview: tidy.PNG
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+```{r, echo=FALSE}
+library(tidyverse)     # for graphing and data cleaning
+library(lubridate)     # for date manipulation
+library(ggthemes)      # for even more plotting themes
+library(plotly)        # for the ggplotly() - basic interactivity
+
+library(gganimate)     # for adding animation layers to ggplots
+library(transformr)    # for "tweening" (gganimate)
+library(gifski)        # need the library for creating gifs but don't need to load each time
+theme_set(theme_minimal())
+```
+
+```{r, echo=FALSE, message=FALSE}
+billboard <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2021/2021-09-14/billboard.csv')
+```
+
+```{r, fig.width=12}
+billboard %>% 
+  filter(week_position == 1) %>% 
+  group_by(song_id) %>% 
+  mutate(total_week = n()) %>% 
+  filter(total_week >= 10) %>% 
+  distinct(song_id, .keep_all = TRUE) %>% 
+  ggplot(aes(x = total_week, y = fct_reorder(song, total_week))) +
+  labs(title="Which songs ranked No.1 for more than 10 weeks?", x = "", y = "", caption = "Plot created by Yunyang Zhong, data from Data.World by way of Sean Miller, Billboard.com and Spotify") +
+  geom_col(aes(fill = weeks_on_chart))
+```
+
+> I created this graph to help answer which songs rank No.1 for more than 10 weeks. Weeks ranked No.1 is the most important variable for my focus and thus my first step was to remove songs whose week position is not 1. Then I grouped by song_id to compute the total weeks ranked No.1 for each song. y-axis was restructued to rank the songs from the longest to the shortest time. Old Town Road ranked No.1 for the longest time (almost 20 weeks), followed by One Sweet Day and Despacito for 16 weeks. The total weeks on chart (ranked top 100) is also included. Although Macarena is not in the top 3, it was on chart for the longest time. There seems to be no relationship between weeks on chart and weeks ranked No.1.
