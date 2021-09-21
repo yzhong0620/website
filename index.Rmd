@@ -72,3 +72,48 @@ January 2020-Present
 * Act as a primary liaison communicating schedule and instructor requirements to members to make sure healthy and efficient interaction
 * Manage ensemble fund by analyzing spending to ensure it remains on budget and for better usage
 * Brainstorm ideas for ensemble recruitment and activities for community building
+
+## Additional Experience
+
+**Macalester College**, Saint Paul, MN
+
+March 2021
+
+*DataFest Participant*
+
+* Awarded best use of external data out of 13 teams
+* Explored and analyzed data and presented the model and outputs in 4 days
+
+**Macalester College**, Saint Paul, MN
+
+January 2021
+
+*MacExplore Participant*
+
+* Selected for campus-wide (more than 2000 students) team-based competition to create public health solutions for Alight
+* Examine community case to propose and present a creative and feasible solution
+
+**Kaggle Research Code Competition**, Saint Paul, MN
+
+October 2020-November 2020
+
+*Team Leader*
+
+* Awarded silver medal in Mechanisms of Action (MoA) Prediction out of 4,373 teams
+* Divided the work into parts and distributed to members with clear and detailed directions based on interest and strength
+* Analyzed given dataset with more than 20000 rows and more than 2000 columns and used the model to predict categories of potential medicines through CNN and TabNet models
+
+**Jie Ming Mandarin Immersion Academy**, Saint Paul, MN
+
+September 2018-May 2019
+
+*Volunteer*
+
+* Prepared materials for in-class activities and graded assignments
+* Enhanced student learning by working one-on-one to review their homework with any Mandarin or Math questions
+
+## Skills
+
+**Programming:** R, Python, Java, SQL, JuliaStats
+
+**Language:** Fluent Mandarin Chinese, Intermediate Korean, Elementary German
