@@ -17,8 +17,44 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## About me:
 
-My name is Yunyang [You-in-young] and I am a senior AMS major with Computer Science and Psychology minors.
+Yunyang Zhong [You-in-young Jong]
 
 ## Education:
 
-Macalester College B.A. Expected May 2022
+**Macalester College**, Saint Paul, MN
+B.A. Expected May 2022
+
+Major: Applied Math and Statistics
+Minors: Computer Science, Psychology
+
+## Work Experience
+
+**YourPath**, Saint Paul, MN
+September 2021-December 2021
+*Statistics Intern*
+- Literature reviews to examine the body of evidence for various behavioral health (BH) and social determinants of health (SDoH) screenings and brief assessments
+- Strategic planning around alignment of data tools (Python, R, SQL, etc) with the existing YourPath technology platforms and previously-developed custom software efforts
+- Development of priority measurements in collaboration with YourPath team
+Quality-assurance and quality-improvement efforts regarding the above
+
+**reThought Insurance**, Saint Paul, MN 
+June 2021-August 2021
+*Data Science Intern*
+- Leveraged the business objectives to develop or establish success criteria metrics to attract more than 15 million investments and meet client needs of diverse high-limit flood coverage
+- Utilized current models and SQL server to extract and manage relevant data which current team of 5 use and for future usage
+- Completed analytical projects that provided data-driven and machine learning solutions to create new models in R and made them available through Shiny dashboard to foster more successful collaboration between the data science team and the broker team
+- Transferred codes and models to JuliaStats and GitLab to feed information into the larger operation system of the company
+
+**Macalester College MSCS Department**, Saint Paul, MN
+September 2020-Present
+*Teaching Assistant for Computational Biology, Probability, and Statistical Machine Learning*
+- Work with students to review their code, identify errors, and suggest better methods for effectiveness to lay the foundation for further study
+- Communicate feedback with professors regarding student learning and grading strategies to enhance learning and teaching experience
+- Assess and grade weekly assignments for approximately 40 students to provide feedback to students
+
+**Macalester African Music Ensemble**, Saint Paul, MN
+January 2020-Present
+*Co-manager*
+- Act as a primary liaison communicating schedule and instructor requirements to members to make sure healthy and efficient interaction
+- Manage ensemble fund by analyzing spending to ensure it remains on budget and for better usage
+- Brainstorm ideas for ensemble recruitment and activities for community building
