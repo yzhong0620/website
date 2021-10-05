@@ -1,5 +1,5 @@
 ---
-title: "tidytuesday3"
+title: "Tidy Tuesday #3"
 description: |
   Tidy Tuesday 09/21/21
 author:
