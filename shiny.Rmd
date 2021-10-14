@@ -1,0 +1,7 @@
+---
+title: "Yunyang's Shiny"
+---
+
+This app shows, for each award, how many nominees each distributor has, and which distributor the winner is under. Users can choose from a list of categories, each represents an award, and under the distributor tab, an according list of distributors is available. The graph on the right provides information about the total nominees each distributor has under the chosen category, and the distributor with the winner is colored red.
+
+https://yunyang-zhong.shinyapps.io/shiny/

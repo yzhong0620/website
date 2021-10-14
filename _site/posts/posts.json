@@ -14,7 +14,7 @@
     "contents": "\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nI created this graph to help answer which distributors have the most nominees in 2020 and 2021. year is one important variable and thus my first step was to filter to information for these two years. Then I grouped by distributor and year to compute how many nominees for each distributor each year. The next step was to group by distributor to find the total nominees for each distributor these two years and filter to distributors who have a total of more than 50 nominees. It is clear from the plot that Netflix has the most nominees, though more distributors became more competitive in 2021. I also found it interesting that HBO Max, launched in 2020, had a great performance with more than 100 nominees in its first year.\r\n\r\n\r\n\r\n\r\n",
     "preview": "posts/2021-09-30-tidytuesday3/tidy.PNG",
     "last_modified": "2021-10-05T10:28:29-05:00",
-    "input_file": "tidytuesday3.knit.md"
+    "input_file": {}
   },
   {
     "path": "posts/2021-09-17-tidytuesday2/",
