@@ -1,5 +1,22 @@
 [
   {
+    "path": "posts/2021-10-18-tidytuesday4/",
+    "title": "Tidy Tuesday #4",
+    "description": "Tidy Tuesday 10/05/21",
+    "author": [
+      {
+        "name": "Yunyang Zhong",
+        "url": {}
+      }
+    ],
+    "date": "2021-10-18",
+    "categories": [],
+    "contents": "\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nI created this graph to help answer which states give the highest average annual salary 1998-2020 and how nurses’ salary changes over the years. I plotted the annual average onto a map and made it a gif, showing values from 1998-2020. I also changed end_pause to 10 to make it easier to follow. States on the west coast seem to have the highest average annual salary while states in the middle have lower. The average increases over the years in all states.\r\n\r\n\r\n\r\n\r\n",
+    "preview": "posts/2021-10-18-tidytuesday4/tidy.gif",
+    "last_modified": "2021-10-19T10:06:50-05:00",
+    "input_file": {}
+  },
+  {
     "path": "posts/2021-09-30-tidytuesday3/",
     "title": "Tidy Tuesday #3",
     "description": "Tidy Tuesday 09/21/21",
