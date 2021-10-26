@@ -36,7 +36,7 @@ nurses <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tid
 states_map <- map_data("state")
 ```
 
-```{r, fig.width=20, eval=FALSE}
+```{r, eval=FALSE}
 tidy <- nurses %>% 
   mutate(state = str_to_lower(State)) %>% 
   ggplot() +
