@@ -1,0 +1,43 @@
+---
+title: "Tidy Tuesday #5"
+description: |
+  Tidy Tuesday 10/26/21
+author:
+  - name: Yunyang Zhong
+date: 10-26-2021
+preview: tidy.PNG
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+```{r, echo=FALSE}
+library(tidyverse)
+library(lubridate)
+library(ggThemeAssist)
+
+ultra_rankings <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2021/2021-10-26/ultra_rankings.csv')
+race <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2021/2021-10-26/race.csv')
+```
+
+```{r}
+ultra_rankings %>% 
+  inner_join(race, by = 'race_year_id') %>%
+  filter(race_year_id == 54013) %>%
+  filter(!is.na(gender)) %>% 
+  mutate(res = hms(time),
+         hour = hour(res) + minute(res)/60 + second(res)/60^2) %>% 
+  group_by(age, gender) %>% 
+  mutate(speed = distance/mean(hour)) %>% 
+  ggplot(aes(x = age, y = speed, color = gender)) +
+  geom_line() +
+  theme(plot.title = element_text(size = 15)) +
+  labs(title="What is the average speed (km/h) for each gender and age to \nfinish P'tiot Sparnatrail?", caption = "Plot created by Yunyang Zhong,\ndata from Benjamin Nowak by way of International Trail Running Association (ITRA)") +
+  theme(axis.title.y = element_text(angle = 0, vjust = 0.5), panel.background = element_rect(fill = "gray90"))
+```
+
+> I created this graph to help answer what is the average speed (km/h) for each gender and age to finish P'tiot Sparnatrail. I first filtered the data to only P'tiot Sparnatrail and then created a new variable representing hour using lubridate. After grouped by gender and age, average speed was computed using distance and average hour. The title was made bigger and the y-axis-title, speed, was made horizontal to make it easier to read. It seems that 30-year-old men and 37-year-old women are the fastest while 72-year-old men and 28-year-old women the slowest.
