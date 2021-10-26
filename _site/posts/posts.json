@@ -13,8 +13,8 @@
     "categories": [],
     "contents": "\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nI created this graph to help answer what is the average speed (km/h) for each gender and age to finish P’tiot Sparnatrail. I first filtered the data to only P’tiot Sparnatrail and then created a new variable representing hour using lubridate. After grouped by gender and age, average speed was computed using distance and average hour. The title was made bigger and the y-axis-title, speed, was made horizontal to make it easier to read. It seems that 30-year-old men and 37-year-old women are the fastest while 72-year-old men and 28-year-old women the slowest. For men, there is a general trend that as age goes up, speed goes down. But there is no such trend for women.\r\n\r\n\r\n\r\n\r\n",
     "preview": "posts/2021-10-26-tidytuesday5/tidy.PNG",
-    "last_modified": "2021-10-26T11:12:10-05:00",
-    "input_file": "tidytuesday5.knit.md"
+    "last_modified": "2021-10-26T11:12:11-05:00",
+    "input_file": {}
   },
   {
     "path": "posts/2021-10-18-tidytuesday4/",
@@ -31,7 +31,7 @@
     "contents": "\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nI created this graph to help answer which states give the highest average annual salary 1998-2020 and how nurses’ salary changes over the years. I plotted the annual average onto a map and made it a gif, showing values from 1998-2020. I also changed end_pause to 10 to make it easier to follow. States on the west coast seem to have the highest average annual salary while states in the middle have lower. The average increases over the years in all states.\r\n\r\n\r\n\r\n\r\n",
     "preview": "posts/2021-10-18-tidytuesday4/tidy.gif",
     "last_modified": "2021-10-26T11:10:48-05:00",
-    "input_file": "tidytuesday4.knit.md"
+    "input_file": {}
   },
   {
     "path": "posts/2021-09-30-tidytuesday3/",
