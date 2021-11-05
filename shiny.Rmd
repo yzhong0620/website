@@ -5,3 +5,7 @@ title: "Yunyang's Shiny"
 This app shows, for each award, how many nominees each distributor has, and which distributor the winner is under. Users can choose from a list of categories, each represents an award, and under the distributor tab, an according list of distributors is available. The graph on the right provides information about the total nominees each distributor has under the chosen category, and the distributor with the winner is colored blue.
 
 https://yunyang-zhong.shinyapps.io/shiny/
+
+Ceteris parabus profiles, or CP profiles, show how one variable affects the outcome, holding all other variables fixed, for one observation. This app allows users to choose a variable of interest and plot its CP profile under the random forest model. Values for each predictor can also be selected; these values form the specific observation for CP profile and are used to predict the probability of this loan being paid back. The blue dot on the plot represents this prediction.
+
+https://yunyang-zhong.shinyapps.io/shiny_cp/
