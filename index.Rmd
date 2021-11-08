@@ -1,7 +1,7 @@
 ---
 title: "Yunyang Zhong"
 description: |
-  STAT456 - Advanced Data Science in R
+  Visualization, Shiny Dashboard, and Projects in R
 site: distill::distill_website
 ---
 
@@ -37,14 +37,15 @@ Minors: Computer Science, Psychology
 
 **YourPath**, Saint Paul, MN
 
-September 2021-December 2021
+September 2021-Present
 
 *Statistics Intern*
 
-* Literature reviews to examine the body of evidence for various behavioral health (BH) and social determinants of health (SDoH) screenings and brief assessments
-* Strategic planning around alignment of data tools (Python, R, SQL, etc) with the existing YourPath technology platforms and previously-developed custom software efforts
-* Development of priority measurements in collaboration with YourPath team
-Quality-assurance and quality-improvement efforts regarding the above
+* Review literature to examine the body of evidence for various behavioral health and social determinants of health screenings and brief assessments
+* Contribute to strategic planning around alignment of data tools (Python, R, SQL, etc) with the existing YourPath technology platforms and previously-developed custom software efforts
+* Utilize R to make clear and concise visualizations and provide insights of data
+* Recommend solutions to improve data collection process by assuring data quality
+
 
 **reThought Insurance**, Saint Paul, MN 
 

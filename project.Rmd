@@ -1,0 +1,27 @@
+---
+title: "Yunyang's Project"
+---
+
+STAT451 - Causal Inference:
+
+[presentation](https://docs.google.com/presentation/d/1MAMqiuQNz8moN81Cf-GnFAp0z4kRL1DZ5HBzAYZK8O4/edit)
+
+STAT452 - Correlated Data:
+
+Coming in spring...
+
+STAT453 - Survival Analysis:
+
+[presentation](https://docs.google.com/presentation/d/1y3EQTmbrHdjBPnQ1R5Q6nfzxWJn6sZmuu9K-MHHYvxI/edit)
+
+STAT454 - Bayesian Statistics:
+
+Coming soon...
+
+STAT455 - Mathematical Statistics:
+
+[presentation](https://jacktansnake.github.io/STAT455_LASSO)
+
+STAT456 - Advanced Data Science in R:
+
+Coming soon...

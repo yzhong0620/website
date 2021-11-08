@@ -13,6 +13,8 @@ navbar:
       href: blog.html
     - text: "Shiny"
       href: shiny.html
+    - text: "Project"
+      href: project.html
     - icon: fa fa-github
       href: https://github.com/yzhong0620
     - icon: fa fa-linkedin
