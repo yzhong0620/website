@@ -1,5 +1,7 @@
 ---
 title: "Causal Inference"
+description: |
+  Causal Inference
 author:
   - name: Yunyang Zhong
 date: 12-14-2021

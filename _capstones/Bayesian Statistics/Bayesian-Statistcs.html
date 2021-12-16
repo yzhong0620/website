@@ -1,0 +1,2095 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+  <meta name="generator" content="distill" />
+
+  <style type="text/css">
+  /* Hide doc at startup (prevent jankiness while JS renders/transforms) */
+  body {
+    visibility: hidden;
+  }
+  </style>
+
+ <!--radix_placeholder_import_source-->
+ <!--/radix_placeholder_import_source-->
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css" data-origin="pandoc">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ad0000; } /* Alert */
+code span.an { color: #5e5e5e; } /* Annotation */
+code span.at { } /* Attribute */
+code span.bn { color: #ad0000; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007ba5; } /* ControlFlow */
+code span.ch { color: #20794d; } /* Char */
+code span.cn { color: #8f5902; } /* Constant */
+code span.co { color: #5e5e5e; } /* Comment */
+code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+code span.dt { color: #ad0000; } /* DataType */
+code span.dv { color: #ad0000; } /* DecVal */
+code span.er { color: #ad0000; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #ad0000; } /* Float */
+code span.fu { color: #4758ab; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #5e5e5e; } /* Information */
+code span.kw { color: #007ba5; } /* Keyword */
+code span.op { color: #5e5e5e; } /* Operator */
+code span.ot { color: #007ba5; } /* Other */
+code span.pp { color: #ad0000; } /* Preprocessor */
+code span.sc { color: #5e5e5e; } /* SpecialChar */
+code span.ss { color: #20794d; } /* SpecialString */
+code span.st { color: #20794d; } /* String */
+code span.va { color: #111111; } /* Variable */
+code span.vs { color: #20794d; } /* VerbatimString */
+code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
+</style>
+
+
+  <!--radix_placeholder_meta_tags-->
+  <title>Risk and Protective Factors for Serious Mental Illness among Patients Receiving Public Mental Health Services</title>
+
+  <meta property="description" itemprop="description" content="Bayesian Statistics"/>
+
+
+  <!--  https://schema.org/Article -->
+  <meta property="article:published" itemprop="datePublished" content="2021-12-14"/>
+  <meta property="article:created" itemprop="dateCreated" content="2021-12-14"/>
+  <meta name="article:author" content="Yunyang Zhong"/>
+
+  <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
+  <meta property="og:title" content="Risk and Protective Factors for Serious Mental Illness among Patients Receiving Public Mental Health Services"/>
+  <meta property="og:type" content="article"/>
+  <meta property="og:description" content="Bayesian Statistics"/>
+  <meta property="og:locale" content="en_US"/>
+
+  <!--  https://dev.twitter.com/cards/types/summary -->
+  <meta property="twitter:card" content="summary"/>
+  <meta property="twitter:title" content="Risk and Protective Factors for Serious Mental Illness among Patients Receiving Public Mental Health Services"/>
+  <meta property="twitter:description" content="Bayesian Statistics"/>
+
+  <!--/radix_placeholder_meta_tags-->
+  <!--radix_placeholder_rmarkdown_metadata-->
+
+  <script type="text/json" id="radix-rmarkdown-metadata">
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output"]}},"value":[{"type":"character","attributes":{},"value":["Risk and Protective Factors for Serious Mental Illness among Patients Receiving Public Mental Health Services"]},{"type":"character","attributes":{},"value":["Bayesian Statistics\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name"]}},"value":[{"type":"character","attributes":{},"value":["Yunyang Zhong"]}]}]},{"type":"character","attributes":{},"value":["12-14-2021"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]}]}
+  </script>
+  <!--/radix_placeholder_rmarkdown_metadata-->
+  
+  <script type="text/json" id="radix-resource-manifest">
+  {"type":"character","attributes":{},"value":["Bayesian-Statistcs_files/figure-html5/unnamed-chunk-10-1.png","Bayesian-Statistcs_files/figure-html5/unnamed-chunk-10-2.png","Bayesian-Statistcs_files/figure-html5/unnamed-chunk-11-1.png","Bayesian-Statistcs_files/figure-html5/unnamed-chunk-11-2.png","Bayesian-Statistcs_files/figure-html5/unnamed-chunk-12-1.png","Bayesian-Statistcs_files/figure-html5/unnamed-chunk-12-2.png","Bayesian-Statistcs_files/figure-html5/unnamed-chunk-13-1.png","Bayesian-Statistcs_files/figure-html5/unnamed-chunk-23-1.png","Bayesian-Statistcs_files/figure-html5/unnamed-chunk-23-2.png","Bayesian-Statistcs_files/figure-html5/unnamed-chunk-24-1.png","Survey_PCS_2017.csv"]}
+  </script>
+  <!--radix_placeholder_navigation_in_header-->
+  <!--/radix_placeholder_navigation_in_header-->
+  <!--radix_placeholder_distill-->
+
+  <style type="text/css">
+
+  body {
+    background-color: white;
+  }
+
+  .pandoc-table {
+    width: 100%;
+  }
+
+  .pandoc-table>caption {
+    margin-bottom: 10px;
+  }
+
+  .pandoc-table th:not([align]) {
+    text-align: left;
+  }
+
+  .pagedtable-footer {
+    font-size: 15px;
+  }
+
+  d-byline .byline {
+    grid-template-columns: 2fr 2fr;
+  }
+
+  d-byline .byline h3 {
+    margin-block-start: 1.5em;
+  }
+
+  d-byline .byline .authors-affiliations h3 {
+    margin-block-start: 0.5em;
+  }
+
+  .authors-affiliations .orcid-id {
+    width: 16px;
+    height:16px;
+    margin-left: 4px;
+    margin-right: 4px;
+    vertical-align: middle;
+    padding-bottom: 2px;
+  }
+
+  d-title .dt-tags {
+    margin-top: 1em;
+    grid-column: text;
+  }
+
+  .dt-tags .dt-tag {
+    text-decoration: none;
+    display: inline-block;
+    color: rgba(0,0,0,0.6);
+    padding: 0em 0.4em;
+    margin-right: 0.5em;
+    margin-bottom: 0.4em;
+    font-size: 70%;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  d-article table.gt_table td,
+  d-article table.gt_table th {
+    border-bottom: none;
+  }
+
+  .html-widget {
+    margin-bottom: 2.0em;
+  }
+
+  .l-screen-inset {
+    padding-right: 16px;
+  }
+
+  .l-screen .caption {
+    margin-left: 10px;
+  }
+
+  .shaded {
+    background: rgb(247, 247, 247);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .shaded .html-widget {
+    margin-bottom: 0;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .shaded .shaded-content {
+    background: white;
+  }
+
+  .text-output {
+    margin-top: 0;
+    line-height: 1.5em;
+  }
+
+  .hidden {
+    display: none !important;
+  }
+
+  d-article {
+    padding-top: 2.5rem;
+    padding-bottom: 30px;
+  }
+
+  d-appendix {
+    padding-top: 30px;
+  }
+
+  d-article>p>img {
+    width: 100%;
+  }
+
+  d-article h2 {
+    margin: 1rem 0 1.5rem 0;
+  }
+
+  d-article h3 {
+    margin-top: 1.5rem;
+  }
+
+  d-article iframe {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin-bottom: 2.0em;
+    width: 100%;
+  }
+
+  /* Tweak code blocks */
+
+  d-article div.sourceCode code,
+  d-article pre code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  d-article pre,
+  d-article div.sourceCode,
+  d-article div.sourceCode pre {
+    overflow: auto;
+  }
+
+  d-article div.sourceCode {
+    background-color: white;
+  }
+
+  d-article div.sourceCode pre {
+    padding-left: 10px;
+    font-size: 12px;
+    border-left: 2px solid rgba(0,0,0,0.1);
+  }
+
+  d-article pre {
+    font-size: 12px;
+    color: black;
+    background: none;
+    margin-top: 0;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+  }
+
+  d-article pre a {
+    border-bottom: none;
+  }
+
+  d-article pre a:hover {
+    border-bottom: none;
+    text-decoration: underline;
+  }
+
+  d-article details {
+    grid-column: text;
+    margin-bottom: 0.8em;
+  }
+
+  @media(min-width: 768px) {
+
+  d-article pre,
+  d-article div.sourceCode,
+  d-article div.sourceCode pre {
+    overflow: visible !important;
+  }
+
+  d-article div.sourceCode pre {
+    padding-left: 18px;
+    font-size: 14px;
+  }
+
+  d-article pre {
+    font-size: 14px;
+  }
+
+  }
+
+  figure img.external {
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+    padding: 18px;
+    box-sizing: border-box;
+  }
+
+  /* CSS for d-contents */
+
+  .d-contents {
+    grid-column: text;
+    color: rgba(0,0,0,0.8);
+    font-size: 0.9em;
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+    padding-bottom: 0.5em;
+    margin-bottom: 1em;
+    padding-left: 0.25em;
+    justify-self: start;
+  }
+
+  @media(min-width: 1000px) {
+    .d-contents.d-contents-float {
+      height: 0;
+      grid-column-start: 1;
+      grid-column-end: 4;
+      justify-self: center;
+      padding-right: 3em;
+      padding-left: 2em;
+    }
+  }
+
+  .d-contents nav h3 {
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 1em;
+  }
+
+  .d-contents li {
+    list-style-type: none
+  }
+
+  .d-contents nav > ul {
+    padding-left: 0;
+  }
+
+  .d-contents ul {
+    padding-left: 1em
+  }
+
+  .d-contents nav ul li {
+    margin-top: 0.6em;
+    margin-bottom: 0.2em;
+  }
+
+  .d-contents nav a {
+    font-size: 13px;
+    border-bottom: none;
+    text-decoration: none
+    color: rgba(0, 0, 0, 0.8);
+  }
+
+  .d-contents nav a:hover {
+    text-decoration: underline solid rgba(0, 0, 0, 0.6)
+  }
+
+  .d-contents nav > ul > li > a {
+    font-weight: 600;
+  }
+
+  .d-contents nav > ul > li > ul {
+    font-weight: inherit;
+  }
+
+  .d-contents nav > ul > li > ul > li {
+    margin-top: 0.2em;
+  }
+
+
+  .d-contents nav ul {
+    margin-top: 0;
+    margin-bottom: 0.25em;
+  }
+
+  .d-article-with-toc h2:nth-child(2) {
+    margin-top: 0;
+  }
+
+
+  /* Figure */
+
+  .figure {
+    position: relative;
+    margin-bottom: 2.5em;
+    margin-top: 1.5em;
+  }
+
+  .figure img {
+    width: 100%;
+  }
+
+  .figure .caption {
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 12px;
+    line-height: 1.5em;
+  }
+
+  .figure img.external {
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+    padding: 18px;
+    box-sizing: border-box;
+  }
+
+  .figure .caption a {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  .figure .caption b,
+  .figure .caption strong, {
+    font-weight: 600;
+    color: rgba(0, 0, 0, 1.0);
+  }
+
+  /* Citations */
+
+  d-article .citation {
+    color: inherit;
+    cursor: inherit;
+  }
+
+  div.hanging-indent{
+    margin-left: 1em; text-indent: -1em;
+  }
+
+  /* Citation hover box */
+
+  .tippy-box[data-theme~=light-border] {
+    background-color: rgba(250, 250, 250, 0.95);
+  }
+
+  .tippy-content > p {
+    margin-bottom: 0;
+    padding: 2px;
+  }
+
+
+  /* Tweak 1000px media break to show more text */
+
+  @media(min-width: 1000px) {
+    .base-grid,
+    distill-header,
+    d-title,
+    d-abstract,
+    d-article,
+    d-appendix,
+    distill-appendix,
+    d-byline,
+    d-footnote-list,
+    d-citation-list,
+    distill-footer {
+      grid-template-columns: [screen-start] 1fr [page-start kicker-start] 80px [middle-start] 50px [text-start kicker-end] 65px 65px 65px 65px 65px 65px 65px 65px [text-end gutter-start] 65px [middle-end] 65px [page-end gutter-end] 1fr [screen-end];
+      grid-column-gap: 16px;
+    }
+
+    .grid {
+      grid-column-gap: 16px;
+    }
+
+    d-article {
+      font-size: 1.06rem;
+      line-height: 1.7em;
+    }
+    figure .caption, .figure .caption, figure figcaption {
+      font-size: 13px;
+    }
+  }
+
+  @media(min-width: 1180px) {
+    .base-grid,
+    distill-header,
+    d-title,
+    d-abstract,
+    d-article,
+    d-appendix,
+    distill-appendix,
+    d-byline,
+    d-footnote-list,
+    d-citation-list,
+    distill-footer {
+      grid-template-columns: [screen-start] 1fr [page-start kicker-start] 60px [middle-start] 60px [text-start kicker-end] 60px 60px 60px 60px 60px 60px 60px 60px [text-end gutter-start] 60px [middle-end] 60px [page-end gutter-end] 1fr [screen-end];
+      grid-column-gap: 32px;
+    }
+
+    .grid {
+      grid-column-gap: 32px;
+    }
+  }
+
+
+  /* Get the citation styles for the appendix (not auto-injected on render since
+     we do our own rendering of the citation appendix) */
+
+  d-appendix .citation-appendix,
+  .d-appendix .citation-appendix {
+    font-size: 11px;
+    line-height: 15px;
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+    padding-left: 18px;
+    border: 1px solid rgba(0,0,0,0.1);
+    background: rgba(0, 0, 0, 0.02);
+    padding: 10px 18px;
+    border-radius: 3px;
+    color: rgba(150, 150, 150, 1);
+    overflow: hidden;
+    margin-top: -12px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  /* Include appendix styles here so they can be overridden */
+
+  d-appendix {
+    contain: layout style;
+    font-size: 0.8em;
+    line-height: 1.7em;
+    margin-top: 60px;
+    margin-bottom: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    color: rgba(0,0,0,0.5);
+    padding-top: 60px;
+    padding-bottom: 48px;
+  }
+
+  d-appendix h3 {
+    grid-column: page-start / text-start;
+    font-size: 15px;
+    font-weight: 500;
+    margin-top: 1em;
+    margin-bottom: 0;
+    color: rgba(0,0,0,0.65);
+  }
+
+  d-appendix h3 + * {
+    margin-top: 1em;
+  }
+
+  d-appendix ol {
+    padding: 0 0 0 15px;
+  }
+
+  @media (min-width: 768px) {
+    d-appendix ol {
+      padding: 0 0 0 30px;
+      margin-left: -30px;
+    }
+  }
+
+  d-appendix li {
+    margin-bottom: 1em;
+  }
+
+  d-appendix a {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  d-appendix > * {
+    grid-column: text;
+  }
+
+  d-appendix > d-footnote-list,
+  d-appendix > d-citation-list,
+  d-appendix > distill-appendix {
+    grid-column: screen;
+  }
+
+  /* Include footnote styles here so they can be overridden */
+
+  d-footnote-list {
+    contain: layout style;
+  }
+
+  d-footnote-list > * {
+    grid-column: text;
+  }
+
+  d-footnote-list a.footnote-backlink {
+    color: rgba(0,0,0,0.3);
+    padding-left: 0.5em;
+  }
+
+
+
+  /* Anchor.js */
+
+  .anchorjs-link {
+    /*transition: all .25s linear; */
+    text-decoration: none;
+    border-bottom: none;
+  }
+  *:hover > .anchorjs-link {
+    margin-left: -1.125em !important;
+    text-decoration: none;
+    border-bottom: none;
+  }
+
+  /* Social footer */
+
+  .social_footer {
+    margin-top: 30px;
+    margin-bottom: 0;
+    color: rgba(0,0,0,0.67);
+  }
+
+  .disqus-comments {
+    margin-right: 30px;
+  }
+
+  .disqus-comment-count {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+  }
+
+  #disqus_thread {
+    margin-top: 30px;
+  }
+
+  .article-sharing a {
+    border-bottom: none;
+    margin-right: 8px;
+  }
+
+  .article-sharing a:hover {
+    border-bottom: none;
+  }
+
+  .sidebar-section.subscribe {
+    font-size: 12px;
+    line-height: 1.6em;
+  }
+
+  .subscribe p {
+    margin-bottom: 0.5em;
+  }
+
+
+  .article-footer .subscribe {
+    font-size: 15px;
+    margin-top: 45px;
+  }
+
+
+  .sidebar-section.custom {
+    font-size: 12px;
+    line-height: 1.6em;
+  }
+
+  .custom p {
+    margin-bottom: 0.5em;
+  }
+
+  /* Styles for listing layout (hide title) */
+  .layout-listing d-title, .layout-listing .d-title {
+    display: none;
+  }
+
+  /* Styles for posts lists (not auto-injected) */
+
+
+  .posts-with-sidebar {
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+
+  .posts-list .description h2,
+  .posts-list .description p {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+  }
+
+  .posts-list .description h2 {
+    font-weight: 700;
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .posts-list h2.post-tag {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    padding-bottom: 12px;
+  }
+  .posts-list {
+    margin-top: 60px;
+    margin-bottom: 24px;
+  }
+
+  .posts-list .post-preview {
+    text-decoration: none;
+    overflow: hidden;
+    display: block;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 24px 0;
+  }
+
+  .post-preview-last {
+    border-bottom: none !important;
+  }
+
+  .posts-list .posts-list-caption {
+    grid-column: screen;
+    font-weight: 400;
+  }
+
+  .posts-list .post-preview h2 {
+    margin: 0 0 6px 0;
+    line-height: 1.2em;
+    font-style: normal;
+    font-size: 24px;
+  }
+
+  .posts-list .post-preview p {
+    margin: 0 0 12px 0;
+    line-height: 1.4em;
+    font-size: 16px;
+  }
+
+  .posts-list .post-preview .thumbnail {
+    box-sizing: border-box;
+    margin-bottom: 24px;
+    position: relative;
+    max-width: 500px;
+  }
+  .posts-list .post-preview img {
+    width: 100%;
+    display: block;
+  }
+
+  .posts-list .metadata {
+    font-size: 12px;
+    line-height: 1.4em;
+    margin-bottom: 18px;
+  }
+
+  .posts-list .metadata > * {
+    display: inline-block;
+  }
+
+  .posts-list .metadata .publishedDate {
+    margin-right: 2em;
+  }
+
+  .posts-list .metadata .dt-authors {
+    display: block;
+    margin-top: 0.3em;
+    margin-right: 2em;
+  }
+
+  .posts-list .dt-tags {
+    display: block;
+    line-height: 1em;
+  }
+
+  .posts-list .dt-tags .dt-tag {
+    display: inline-block;
+    color: rgba(0,0,0,0.6);
+    padding: 0.3em 0.4em;
+    margin-right: 0.2em;
+    margin-bottom: 0.4em;
+    font-size: 60%;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  .posts-list img {
+    opacity: 1;
+  }
+
+  .posts-list img[data-src] {
+    opacity: 0;
+  }
+
+  .posts-more {
+    clear: both;
+  }
+
+
+  .posts-sidebar {
+    font-size: 16px;
+  }
+
+  .posts-sidebar h3 {
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+  .sidebar-section {
+    margin-bottom: 30px;
+  }
+
+  .categories ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .categories li {
+    color: rgba(0, 0, 0, 0.8);
+    margin-bottom: 0;
+  }
+
+  .categories li>a {
+    border-bottom: none;
+  }
+
+  .categories li>a:hover {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  }
+
+  .categories .active {
+    font-weight: 600;
+  }
+
+  .categories .category-count {
+    color: rgba(0, 0, 0, 0.4);
+  }
+
+
+  @media(min-width: 768px) {
+    .posts-list .post-preview h2 {
+      font-size: 26px;
+    }
+    .posts-list .post-preview .thumbnail {
+      float: right;
+      width: 30%;
+      margin-bottom: 0;
+    }
+    .posts-list .post-preview .description {
+      float: left;
+      width: 45%;
+    }
+    .posts-list .post-preview .metadata {
+      float: left;
+      width: 20%;
+      margin-top: 8px;
+    }
+    .posts-list .post-preview p {
+      margin: 0 0 12px 0;
+      line-height: 1.5em;
+      font-size: 16px;
+    }
+    .posts-with-sidebar .posts-list {
+      float: left;
+      width: 75%;
+    }
+    .posts-with-sidebar .posts-sidebar {
+      float: right;
+      width: 20%;
+      margin-top: 60px;
+      padding-top: 24px;
+      padding-bottom: 24px;
+    }
+  }
+
+
+  /* Improve display for browsers without grid (IE/Edge <= 15) */
+
+  .downlevel {
+    line-height: 1.6em;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+    margin: 0;
+  }
+
+  .downlevel .d-title {
+    padding-top: 6rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .downlevel .d-title h1 {
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 1.1em;
+    margin: 0 0 0.5rem;
+  }
+
+  .downlevel .d-title p {
+    font-weight: 300;
+    font-size: 1.2rem;
+    line-height: 1.55em;
+    margin-top: 0;
+  }
+
+  .downlevel .d-byline {
+    padding-top: 0.8em;
+    padding-bottom: 0.8em;
+    font-size: 0.8rem;
+    line-height: 1.8em;
+  }
+
+  .downlevel .section-separator {
+    border: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .downlevel .d-article {
+    font-size: 1.06rem;
+    line-height: 1.7em;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+  }
+
+
+  .downlevel .d-appendix {
+    padding-left: 0;
+    padding-right: 0;
+    max-width: none;
+    font-size: 0.8em;
+    line-height: 1.7em;
+    margin-bottom: 0;
+    color: rgba(0,0,0,0.5);
+    padding-top: 40px;
+    padding-bottom: 48px;
+  }
+
+  .downlevel .footnotes ol {
+    padding-left: 13px;
+  }
+
+  .downlevel .base-grid,
+  .downlevel .distill-header,
+  .downlevel .d-title,
+  .downlevel .d-abstract,
+  .downlevel .d-article,
+  .downlevel .d-appendix,
+  .downlevel .distill-appendix,
+  .downlevel .d-byline,
+  .downlevel .d-footnote-list,
+  .downlevel .d-citation-list,
+  .downlevel .distill-footer,
+  .downlevel .appendix-bottom,
+  .downlevel .posts-container {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  @media(min-width: 768px) {
+    .downlevel .base-grid,
+    .downlevel .distill-header,
+    .downlevel .d-title,
+    .downlevel .d-abstract,
+    .downlevel .d-article,
+    .downlevel .d-appendix,
+    .downlevel .distill-appendix,
+    .downlevel .d-byline,
+    .downlevel .d-footnote-list,
+    .downlevel .d-citation-list,
+    .downlevel .distill-footer,
+    .downlevel .appendix-bottom,
+    .downlevel .posts-container {
+    padding-left: 150px;
+    padding-right: 150px;
+    max-width: 900px;
+  }
+  }
+
+  .downlevel pre code {
+    display: block;
+    border-left: 2px solid rgba(0, 0, 0, .1);
+    padding: 0 0 0 20px;
+    font-size: 14px;
+  }
+
+  .downlevel code, .downlevel pre {
+    color: black;
+    background: none;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+  }
+
+  .downlevel .posts-list .post-preview {
+    color: inherit;
+  }
+
+
+
+  </style>
+
+  <script type="application/javascript">
+
+  function is_downlevel_browser() {
+    if (bowser.isUnsupportedBrowser({ msie: "12", msedge: "16"},
+                                   window.navigator.userAgent)) {
+      return true;
+    } else {
+      return window.load_distill_framework === undefined;
+    }
+  }
+
+  // show body when load is complete
+  function on_load_complete() {
+
+    // add anchors
+    if (window.anchors) {
+      window.anchors.options.placement = 'left';
+      window.anchors.add('d-article > h2, d-article > h3, d-article > h4, d-article > h5');
+    }
+
+
+    // set body to visible
+    document.body.style.visibility = 'visible';
+
+    // force redraw for leaflet widgets
+    if (window.HTMLWidgets) {
+      var maps = window.HTMLWidgets.findAll(".leaflet");
+      $.each(maps, function(i, el) {
+        var map = this.getMap();
+        map.invalidateSize();
+        map.eachLayer(function(layer) {
+          if (layer instanceof L.TileLayer)
+            layer.redraw();
+        });
+      });
+    }
+
+    // trigger 'shown' so htmlwidgets resize
+    $('d-article').trigger('shown');
+  }
+
+  function init_distill() {
+
+    init_common();
+
+    // create front matter
+    var front_matter = $('<d-front-matter></d-front-matter>');
+    $('#distill-front-matter').wrap(front_matter);
+
+    // create d-title
+    $('.d-title').changeElementType('d-title');
+
+    // create d-byline
+    var byline = $('<d-byline></d-byline>');
+    $('.d-byline').replaceWith(byline);
+
+    // create d-article
+    var article = $('<d-article></d-article>');
+    $('.d-article').wrap(article).children().unwrap();
+
+    // move posts container into article
+    $('.posts-container').appendTo($('d-article'));
+
+    // create d-appendix
+    $('.d-appendix').changeElementType('d-appendix');
+
+    // flag indicating that we have appendix items
+    var appendix = $('.appendix-bottom').children('h3').length > 0;
+
+    // replace footnotes with <d-footnote>
+    $('.footnote-ref').each(function(i, val) {
+      appendix = true;
+      var href = $(this).attr('href');
+      var id = href.replace('#', '');
+      var fn = $('#' + id);
+      var fn_p = $('#' + id + '>p');
+      fn_p.find('.footnote-back').remove();
+      var text = fn_p.html();
+      var dtfn = $('<d-footnote></d-footnote>');
+      dtfn.html(text);
+      $(this).replaceWith(dtfn);
+    });
+    // remove footnotes
+    $('.footnotes').remove();
+
+    // move refs into #references-listing
+    $('#references-listing').replaceWith($('#refs'));
+
+    $('h1.appendix, h2.appendix').each(function(i, val) {
+      $(this).changeElementType('h3');
+    });
+    $('h3.appendix').each(function(i, val) {
+      var id = $(this).attr('id');
+      $('.d-contents a[href="#' + id + '"]').parent().remove();
+      appendix = true;
+      $(this).nextUntil($('h1, h2, h3')).addBack().appendTo($('d-appendix'));
+    });
+
+    // show d-appendix if we have appendix content
+    $("d-appendix").css('display', appendix ? 'grid' : 'none');
+
+    // localize layout chunks to just output
+    $('.layout-chunk').each(function(i, val) {
+
+      // capture layout
+      var layout = $(this).attr('data-layout');
+
+      // apply layout to markdown level block elements
+      var elements = $(this).children().not('details, div.sourceCode, pre, script');
+      elements.each(function(i, el) {
+        var layout_div = $('<div class="' + layout + '"></div>');
+        if (layout_div.hasClass('shaded')) {
+          var shaded_content = $('<div class="shaded-content"></div>');
+          $(this).wrap(shaded_content);
+          $(this).parent().wrap(layout_div);
+        } else {
+          $(this).wrap(layout_div);
+        }
+      });
+
+
+      // unwrap the layout-chunk div
+      $(this).children().unwrap();
+    });
+
+    // remove code block used to force  highlighting css
+    $('.distill-force-highlighting-css').parent().remove();
+
+    // remove empty line numbers inserted by pandoc when using a
+    // custom syntax highlighting theme
+    $('code.sourceCode a:empty').remove();
+
+    // load distill framework
+    load_distill_framework();
+
+    // wait for window.distillRunlevel == 4 to do post processing
+    function distill_post_process() {
+
+      if (!window.distillRunlevel || window.distillRunlevel < 4)
+        return;
+
+      // hide author/affiliations entirely if we have no authors
+      var front_matter = JSON.parse($("#distill-front-matter").html());
+      var have_authors = front_matter.authors && front_matter.authors.length > 0;
+      if (!have_authors)
+        $('d-byline').addClass('hidden');
+
+      // article with toc class
+      $('.d-contents').parent().addClass('d-article-with-toc');
+
+      // strip links that point to #
+      $('.authors-affiliations').find('a[href="#"]').removeAttr('href');
+
+      // add orcid ids
+      $('.authors-affiliations').find('.author').each(function(i, el) {
+        var orcid_id = front_matter.authors[i].orcidID;
+        if (orcid_id) {
+          var a = $('<a></a>');
+          a.attr('href', 'https://orcid.org/' + orcid_id);
+          var img = $('<img></img>');
+          img.addClass('orcid-id');
+          img.attr('alt', 'ORCID ID');
+          img.attr('src','data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg==');
+          a.append(img);
+          $(this).append(a);
+        }
+      });
+
+      // hide elements of author/affiliations grid that have no value
+      function hide_byline_column(caption) {
+        $('d-byline').find('h3:contains("' + caption + '")').parent().css('visibility', 'hidden');
+      }
+
+      // affiliations
+      var have_affiliations = false;
+      for (var i = 0; i<front_matter.authors.length; ++i) {
+        var author = front_matter.authors[i];
+        if (author.affiliation !== "&nbsp;") {
+          have_affiliations = true;
+          break;
+        }
+      }
+      if (!have_affiliations)
+        $('d-byline').find('h3:contains("Affiliations")').css('visibility', 'hidden');
+
+      // published date
+      if (!front_matter.publishedDate)
+        hide_byline_column("Published");
+
+      // document object identifier
+      var doi = $('d-byline').find('h3:contains("DOI")');
+      var doi_p = doi.next().empty();
+      if (!front_matter.doi) {
+        // if we have a citation and valid citationText then link to that
+        if ($('#citation').length > 0 && front_matter.citationText) {
+          doi.html('Citation');
+          $('<a href="#citation"></a>')
+            .text(front_matter.citationText)
+            .appendTo(doi_p);
+        } else {
+          hide_byline_column("DOI");
+        }
+      } else {
+        $('<a></a>')
+           .attr('href', "https://doi.org/" + front_matter.doi)
+           .html(front_matter.doi)
+           .appendTo(doi_p);
+      }
+
+       // change plural form of authors/affiliations
+      if (front_matter.authors.length === 1) {
+        var grid = $('.authors-affiliations');
+        grid.children('h3:contains("Authors")').text('Author');
+        grid.children('h3:contains("Affiliations")').text('Affiliation');
+      }
+
+      // remove d-appendix and d-footnote-list local styles
+      $('d-appendix > style:first-child').remove();
+      $('d-footnote-list > style:first-child').remove();
+
+      // move appendix-bottom entries to the bottom
+      $('.appendix-bottom').appendTo('d-appendix').children().unwrap();
+      $('.appendix-bottom').remove();
+
+      // hoverable references
+      $('span.citation[data-cites]').each(function() {
+        var refs = $(this).attr('data-cites').split(" ");
+        var refHtml = refs.map(function(ref) {
+          return "<p>" + $('#ref-' + ref).html() + "</p>";
+        }).join("\n");
+        window.tippy(this, {
+          allowHTML: true,
+          content: refHtml,
+          maxWidth: 500,
+          interactive: true,
+          interactiveBorder: 10,
+          theme: 'light-border',
+          placement: 'bottom-start'
+        });
+      });
+
+      // clear polling timer
+      clearInterval(tid);
+
+      // show body now that everything is ready
+      on_load_complete();
+    }
+
+    var tid = setInterval(distill_post_process, 50);
+    distill_post_process();
+
+  }
+
+  function init_downlevel() {
+
+    init_common();
+
+     // insert hr after d-title
+    $('.d-title').after($('<hr class="section-separator"/>'));
+
+    // check if we have authors
+    var front_matter = JSON.parse($("#distill-front-matter").html());
+    var have_authors = front_matter.authors && front_matter.authors.length > 0;
+
+    // manage byline/border
+    if (!have_authors)
+      $('.d-byline').remove();
+    $('.d-byline').after($('<hr class="section-separator"/>'));
+    $('.d-byline a').remove();
+
+    // remove toc
+    $('.d-contents').remove();
+
+    // move appendix elements
+    $('h1.appendix, h2.appendix').each(function(i, val) {
+      $(this).changeElementType('h3');
+    });
+    $('h3.appendix').each(function(i, val) {
+      $(this).nextUntil($('h1, h2, h3')).addBack().appendTo($('.d-appendix'));
+    });
+
+
+    // inject headers into references and footnotes
+    var refs_header = $('<h3></h3>');
+    refs_header.text('References');
+    $('#refs').prepend(refs_header);
+
+    var footnotes_header = $('<h3></h3');
+    footnotes_header.text('Footnotes');
+    $('.footnotes').children('hr').first().replaceWith(footnotes_header);
+
+    // move appendix-bottom entries to the bottom
+    $('.appendix-bottom').appendTo('.d-appendix').children().unwrap();
+    $('.appendix-bottom').remove();
+
+    // remove appendix if it's empty
+    if ($('.d-appendix').children().length === 0)
+      $('.d-appendix').remove();
+
+    // prepend separator above appendix
+    $('.d-appendix').before($('<hr class="section-separator" style="clear: both"/>'));
+
+    // trim code
+    $('pre>code').each(function(i, val) {
+      $(this).html($.trim($(this).html()));
+    });
+
+    // move posts-container right before article
+    $('.posts-container').insertBefore($('.d-article'));
+
+    $('body').addClass('downlevel');
+
+    on_load_complete();
+  }
+
+
+  function init_common() {
+
+    // jquery plugin to change element types
+    (function($) {
+      $.fn.changeElementType = function(newType) {
+        var attrs = {};
+
+        $.each(this[0].attributes, function(idx, attr) {
+          attrs[attr.nodeName] = attr.nodeValue;
+        });
+
+        this.replaceWith(function() {
+          return $("<" + newType + "/>", attrs).append($(this).contents());
+        });
+      };
+    })(jQuery);
+
+    // prevent underline for linked images
+    $('a > img').parent().css({'border-bottom' : 'none'});
+
+    // mark non-body figures created by knitr chunks as 100% width
+    $('.layout-chunk').each(function(i, val) {
+      var figures = $(this).find('img, .html-widget');
+      if ($(this).attr('data-layout') !== "l-body") {
+        figures.css('width', '100%');
+      } else {
+        figures.css('max-width', '100%');
+        figures.filter("[width]").each(function(i, val) {
+          var fig = $(this);
+          fig.css('width', fig.attr('width') + 'px');
+        });
+
+      }
+    });
+
+    // auto-append index.html to post-preview links in file: protocol
+    // and in rstudio ide preview
+    $('.post-preview').each(function(i, val) {
+      if (window.location.protocol === "file:")
+        $(this).attr('href', $(this).attr('href') + "index.html");
+    });
+
+    // get rid of index.html references in header
+    if (window.location.protocol !== "file:") {
+      $('.distill-site-header a[href]').each(function(i,val) {
+        $(this).attr('href', $(this).attr('href').replace("index.html", "./"));
+      });
+    }
+
+    // add class to pandoc style tables
+    $('tr.header').parent('thead').parent('table').addClass('pandoc-table');
+    $('.kable-table').children('table').addClass('pandoc-table');
+
+    // add figcaption style to table captions
+    $('caption').parent('table').addClass("figcaption");
+
+    // initialize posts list
+    if (window.init_posts_list)
+      window.init_posts_list();
+
+    // implmement disqus comment link
+    $('.disqus-comment-count').click(function() {
+      window.headroom_prevent_pin = true;
+      $('#disqus_thread').toggleClass('hidden');
+      if (!$('#disqus_thread').hasClass('hidden')) {
+        var offset = $(this).offset();
+        $(window).resize();
+        $('html, body').animate({
+          scrollTop: offset.top - 35
+        });
+      }
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    if (is_downlevel_browser())
+      init_downlevel();
+    else
+      window.addEventListener('WebComponentsReady', init_distill);
+  });
+
+  </script>
+
+  <!--/radix_placeholder_distill-->
+  <script src="Bayesian-Statistcs_files/header-attrs-2.11/header-attrs.js"></script>
+  <script src="Bayesian-Statistcs_files/kePrint-0.0.1/kePrint.js"></script>
+  <link href="Bayesian-Statistcs_files/lightable-0.0.1/lightable.css" rel="stylesheet" />
+  <script src="Bayesian-Statistcs_files/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+  <script src="Bayesian-Statistcs_files/popper-2.6.0/popper.min.js"></script>
+  <link href="Bayesian-Statistcs_files/tippy-6.2.7/tippy.css" rel="stylesheet" />
+  <link href="Bayesian-Statistcs_files/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
+  <script src="Bayesian-Statistcs_files/tippy-6.2.7/tippy.umd.min.js"></script>
+  <script src="Bayesian-Statistcs_files/anchor-4.2.2/anchor.min.js"></script>
+  <script src="Bayesian-Statistcs_files/bowser-1.9.3/bowser.min.js"></script>
+  <script src="Bayesian-Statistcs_files/webcomponents-2.0.0/webcomponents.js"></script>
+  <script src="Bayesian-Statistcs_files/distill-2.2.21/template.v2.js"></script>
+  <!--radix_placeholder_site_in_header-->
+  <!--/radix_placeholder_site_in_header-->
+
+
+</head>
+
+<body>
+
+<!--radix_placeholder_front_matter-->
+
+<script id="distill-front-matter" type="text/json">
+{"title":"Risk and Protective Factors for Serious Mental Illness among Patients Receiving Public Mental Health Services","description":"Bayesian Statistics","authors":[{"author":"Yunyang Zhong","authorURL":"#","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2021-12-14T00:00:00.000-06:00","citationText":"Zhong, 2021"}
+</script>
+
+<!--/radix_placeholder_front_matter-->
+<!--radix_placeholder_navigation_before_body-->
+<!--/radix_placeholder_navigation_before_body-->
+<!--radix_placeholder_site_before_body-->
+<!--/radix_placeholder_site_before_body-->
+
+<div class="d-title">
+<h1>Risk and Protective Factors for Serious Mental Illness among Patients Receiving Public Mental Health Services</h1>
+<!--radix_placeholder_categories-->
+<!--/radix_placeholder_categories-->
+<p><p>Bayesian Statistics</p></p>
+</div>
+
+<div class="d-byline">
+  Yunyang Zhong  
+  
+<br/>12-14-2021
+</div>
+
+<div class="d-article">
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://tidyverse.tidyverse.org'>tidyverse</a></span><span class='op'>)</span>
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://haozhu233.github.io/kableExtra/'>kableExtra</a></span><span class='op'>)</span>
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://mjskay.github.io/tidybayes/'>tidybayes</a></span><span class='op'>)</span>
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://mc-stan.org/rstan'>rstan</a></span><span class='op'>)</span>
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://mc-stan.org/rstanarm/'>rstanarm</a></span><span class='op'>)</span>
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://mc-stan.org/bayesplot/'>bayesplot</a></span><span class='op'>)</span>
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://bayes-rules.github.io/bayesrules/docs/'>bayesrules</a></span><span class='op'>)</span>
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://github.com/bbolker/broom.mixed'>broom.mixed</a></span><span class='op'>)</span>
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://github.com/sfirke/janitor'>janitor</a></span><span class='op'>)</span>
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'>e1071</span><span class='op'>)</span>
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://www.statistik.tu-dortmund.de'>klaR</a></span><span class='op'>)</span>
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://github.com/ludvigolsen/groupdata2'>groupdata2</a></span><span class='op'>)</span>
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://patchwork.data-imaginist.com'>patchwork</a></span><span class='op'>)</span>
+<span class='va'>survey</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/readr/man/read_delim.html'>read_csv</a></span><span class='op'>(</span><span class='st'>"Survey_PCS_2017.csv"</span><span class='op'>)</span>
+</code></pre>
+</div>
+</div>
+<h1 id="intoduction">Intoduction</h1>
+<p>There are well documented disparities in mental health outcomes between transgender people and their cisgender (ie not transgender) peers (Goldenberg et al. 2019; McDowell, Hughto, &amp; Reisner, 2019; Flores et al., 2018; Bailey, Ellis, &amp; McNeil, 2014; Haas, Rodgers, &amp; Herman, 2014). Bailey, Ellis, &amp; McNeil (2014) found 84% prevalence of suicidal ideation and 48% prevalence of suicide attempt history among trans people. This suicide attempt rate is more than ten times the national average of 4.6% (Haas, Rodgers, &amp; Herman, 2014). The disparities are especially large for transgender people of color (TPOC) (Goldenberg et al. 2019; Flores et al., 2018; Haas, Rodgers, &amp; Herman, 2014). Hass, Rodgers, &amp; Herman (2014) found that white trans people surveyed had the lowest suicide attempt rate of any racial group at 38%, while the suicide attempt rate for TPOC ranged from 39% (Asian American) to 44% (Hispanic/Latino) to 45% (Black) to 54% (multiracial) to 56% (Native American). This may be related to the fact that TPOC are at much higher risk of violence (including harassment, physical, sexual, and intimate partner) than white trans people (Flores et al., 2018).</p>
+<p>Because of this we thought it would be important to look for protective factors against poor mental health outcomes, in particular for trans people, and especially TPOC. McDowell, Hughto, &amp; Reisner (2019) asked a similar question and found that lack of employment, lower income and education level, daily discrimination, and violence were all significant risk factors for mental illness among trans people. These could potentially point to places for short term intervention in a transphobic world resistant to (much needed) radical change.</p>
+<h1 id="our-data">Our Data</h1>
+<p>However, we were limited by the small number of publicly available data sets that collect information about transgender identity. We ended up using data from the 2017 Patient Characteristics Study (PCS), conducted by the New York State Office of Mental Health to better understand and reform the public mental health system. The PCS collects information about every client receiving public mental health services in the state of New York for a one week period, every 2 years. In 2017 there were 175,926 patients recorded, 1,844 of which identified as themselves as transgender. You can learn more about the study here: <a href="https://omh.ny.gov/omhweb/pcs/submissions/" class="uri">https://omh.ny.gov/omhweb/pcs/submissions/</a>. We downloaded the data from <a href="https://catalog.data.gov/dataset/patient-characteristics-survey-pcs-2017" class="uri">https://catalog.data.gov/dataset/patient-characteristics-survey-pcs-2017</a>.</p>
+<p>One major limitation of this data set is because everyone included in it is receiving public mental health services, it is not representative of the general population. Another limitation is lack of diversity of mental health outcome measures, including only “mental illness”, “serious mental illness”, “drug substance disorder”, and “alcohol related disorder” but excluding outcomes like suicide attempts, self injury, or specific diagnoses. Our initial research question asked what factors are associated with better mental health outcomes for trans people, i.e. what mediates or moderates the relationship between trans identity and poor mental health? However, unlike the trends found in the general population, in this population being transgender was not significantly related to any measured mental health outcome. Thus, we shifted our focus to ask what broader factors predict serious mental illness, such as race, employment, age, sexual orientation, and education.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span><span class='op'>(</span>variable <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"Transgender"</span>, <span class='st'>"Mental Illness"</span>, <span class='st'>"Race"</span>, <span class='st'>"Hispanic Ethnicity"</span>, <span class='st'>"Sexual Orientation"</span>, <span class='st'>"Age Group"</span>, <span class='st'>"Serious Mental Illness"</span>, <span class='st'>"Alcohol Related Disorder"</span>, <span class='st'>"Drug Substance Disorder"</span>, <span class='st'>"Education Status"</span>, <span class='st'>"Number Of Hours Worked Each Week"</span><span class='op'>)</span>, meaning <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"YES or NO"</span>, <span class='st'>"YES or NO"</span>, <span class='st'>"WHITE ONLY, BLACK ONLY, MULTI-RACIAL, or OTHER"</span>, <span class='st'>"YES or NO"</span>, <span class='st'>"BISEXUAL, LESBIAN/GAY, STRAIGHT/HETEROSEXUAL, or OTHER"</span>, <span class='st'>"ADULT or CHILD"</span>, <span class='st'>"YES or NO"</span>, <span class='st'>"YES or NO"</span>, <span class='st'>"YES or NO"</span>, <span class='st'>"COLLEGE OR GRADUATE DEGREE, MIDDLE SCHOOL TO HIGH SCHOOL, NO FORMAL EDUCATION, OTHER, PRE-K TO FIFTH GRADE, SOME COLLEGE"</span>, <span class='st'>"01-14 HOURS, 15-34 HOURS, 35 HOURS OR MORE, or NOT APPLICABLE"</span><span class='op'>)</span><span class='op'>)</span> <span class='op'><a href='https://rdrr.io/pkg/magrittr/man/pipe.html'>%&gt;%</a></span> 
+  <span class='fu'><a href='https://rdrr.io/pkg/kableExtra/man/kbl.html'>kbl</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'><a href='https://rdrr.io/pkg/magrittr/man/pipe.html'>%&gt;%</a></span> 
+  <span class='fu'><a href='https://rdrr.io/pkg/kableExtra/man/kable_styling.html'>kable_styling</a></span><span class='op'>(</span>position <span class='op'>=</span> <span class='st'>"center"</span><span class='op'>)</span>
+</code></pre>
+</div>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+variable
+</th>
+<th style="text-align:left;">
+meaning
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Transgender
+</td>
+<td style="text-align:left;">
+YES or NO
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Mental Illness
+</td>
+<td style="text-align:left;">
+YES or NO
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Race
+</td>
+<td style="text-align:left;">
+WHITE ONLY, BLACK ONLY, MULTI-RACIAL, or OTHER
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Hispanic Ethnicity
+</td>
+<td style="text-align:left;">
+YES or NO
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Sexual Orientation
+</td>
+<td style="text-align:left;">
+BISEXUAL, LESBIAN/GAY, STRAIGHT/HETEROSEXUAL, or OTHER
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Age Group
+</td>
+<td style="text-align:left;">
+ADULT or CHILD
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Serious Mental Illness
+</td>
+<td style="text-align:left;">
+YES or NO
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Alcohol Related Disorder
+</td>
+<td style="text-align:left;">
+YES or NO
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Drug Substance Disorder
+</td>
+<td style="text-align:left;">
+YES or NO
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Education Status
+</td>
+<td style="text-align:left;">
+COLLEGE OR GRADUATE DEGREE, MIDDLE SCHOOL TO HIGH SCHOOL, NO FORMAL EDUCATION, OTHER, PRE-K TO FIFTH GRADE, SOME COLLEGE
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Number Of Hours Worked Each Week
+</td>
+<td style="text-align:left;">
+01-14 HOURS, 15-34 HOURS, 35 HOURS OR MORE, or NOT APPLICABLE
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h1 id="data-cleaning">Data Cleaning</h1>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'># cleaning the data!</span>
+<span class='va'>survey_cleaned</span> <span class='op'>&lt;-</span> <span class='va'>survey</span> <span class='op'><a href='https://rdrr.io/pkg/magrittr/man/pipe.html'>%&gt;%</a></span> 
+  <span class='fu'><a href='https://rdrr.io/pkg/dplyr/man/filter.html'>filter</a></span><span class='op'>(</span><span class='va'>Transgender</span> <span class='op'>==</span> <span class='st'>"NO, NOT TRANSGENDER"</span> <span class='op'>|</span> <span class='va'>Transgender</span> <span class='op'>==</span> <span class='st'>"YES, TRANSGENDER"</span><span class='op'>)</span> <span class='op'><a href='https://rdrr.io/pkg/magrittr/man/pipe.html'>%&gt;%</a></span>
+  <span class='fu'><a href='https://rdrr.io/pkg/dplyr/man/filter.html'>filter</a></span><span class='op'>(</span><span class='va'>Race</span> <span class='op'>==</span> <span class='st'>"WHITE ONLY"</span> <span class='op'>|</span> <span class='va'>Race</span> <span class='op'>==</span> <span class='st'>"BLACK ONLY"</span> <span class='op'>|</span> <span class='va'>Race</span> <span class='op'>==</span> <span class='st'>"MULTI-RACIAL"</span> <span class='op'>|</span> <span class='va'>Race</span> <span class='op'>==</span> <span class='st'>"OTHER"</span><span class='op'>)</span> <span class='op'><a href='https://rdrr.io/pkg/magrittr/man/pipe.html'>%&gt;%</a></span> 
+  <span class='fu'><a href='https://rdrr.io/pkg/dplyr/man/filter.html'>filter</a></span><span class='op'>(</span><span class='va'>`Alcohol Related Disorder`</span> <span class='op'>==</span> <span class='st'>"YES"</span> <span class='op'>|</span> <span class='va'>`Alcohol Related Disorder`</span> <span class='op'>==</span> <span class='st'>"NO"</span><span class='op'>)</span> <span class='op'><a href='https://rdrr.io/pkg/magrittr/man/pipe.html'>%&gt;%</a></span> 
+  <span class='fu'><a href='https://rdrr.io/pkg/dplyr/man/filter.html'>filter</a></span><span class='op'>(</span><span class='va'>`Drug Substance Disorder`</span> <span class='op'>==</span> <span class='st'>"YES"</span> <span class='op'>|</span> <span class='va'>`Drug Substance Disorder`</span> <span class='op'>==</span> <span class='st'>"NO"</span><span class='op'>)</span> <span class='op'><a href='https://rdrr.io/pkg/magrittr/man/pipe.html'>%&gt;%</a></span> 
+  <span class='fu'><a href='https://rdrr.io/pkg/dplyr/man/filter.html'>filter</a></span><span class='op'>(</span><span class='va'>`Education Status`</span> <span class='op'>!=</span> <span class='st'>"UNKNOWN"</span><span class='op'>)</span> <span class='op'><a href='https://rdrr.io/pkg/magrittr/man/pipe.html'>%&gt;%</a></span> 
+  <span class='fu'><a href='https://rdrr.io/pkg/dplyr/man/filter.html'>filter</a></span><span class='op'>(</span><span class='va'>`Hispanic Ethnicity`</span> <span class='op'>!=</span> <span class='st'>"UNKNOWN"</span><span class='op'>)</span> <span class='op'><a href='https://rdrr.io/pkg/magrittr/man/pipe.html'>%&gt;%</a></span> 
+  <span class='fu'><a href='https://rdrr.io/pkg/dplyr/man/filter.html'>filter</a></span><span class='op'>(</span><span class='va'>`Number Of Hours Worked Each Week`</span> <span class='op'>!=</span> <span class='st'>"UNKNOWN EMPLOYMENT HOURS"</span><span class='op'>)</span> <span class='op'><a href='https://rdrr.io/pkg/magrittr/man/pipe.html'>%&gt;%</a></span> 
+  <span class='fu'><a href='https://rdrr.io/pkg/dplyr/man/filter.html'>filter</a></span><span class='op'>(</span><span class='va'>`Mental Illness`</span> <span class='op'>!=</span> <span class='st'>"UNKNOWN"</span><span class='op'>)</span> <span class='op'><a href='https://rdrr.io/pkg/magrittr/man/pipe.html'>%&gt;%</a></span> 
+  <span class='fu'><a href='https://rdrr.io/pkg/dplyr/man/filter.html'>filter</a></span><span class='op'>(</span><span class='va'>`Age Group`</span> <span class='op'>!=</span> <span class='st'>"UNKNOWN"</span><span class='op'>)</span> <span class='op'><a href='https://rdrr.io/pkg/magrittr/man/pipe.html'>%&gt;%</a></span>
+  <span class='fu'><a href='https://rdrr.io/pkg/dplyr/man/filter.html'>filter</a></span><span class='op'>(</span><span class='va'>`Serious Mental Illness`</span> <span class='op'>!=</span> <span class='st'>"UNKNOWN"</span><span class='op'>)</span> <span class='op'><a href='https://rdrr.io/pkg/magrittr/man/pipe.html'>%&gt;%</a></span> 
+  <span class='fu'><a href='https://rdrr.io/pkg/dplyr/man/filter.html'>filter</a></span><span class='op'>(</span><span class='va'>`Sexual Orientation`</span> <span class='op'>!=</span> <span class='st'>"CLIENT DID NOT ANSWER"</span><span class='op'>)</span> <span class='op'><a href='https://rdrr.io/pkg/magrittr/man/pipe.html'>%&gt;%</a></span> 
+  <span class='fu'><a href='https://rdrr.io/pkg/dplyr/man/filter.html'>filter</a></span><span class='op'>(</span><span class='va'>`Sexual Orientation`</span> <span class='op'>!=</span> <span class='st'>"UNKNOWN"</span><span class='op'>)</span> <span class='op'><a href='https://rdrr.io/pkg/magrittr/man/pipe.html'>%&gt;%</a></span> 
+  <span class='fu'><a href='https://rdrr.io/pkg/dplyr/man/mutate.html'>mutate</a></span><span class='op'>(</span>`Number Of Hours Worked Each Week` <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/pkg/forcats/man/fct_recode.html'>fct_recode</a></span><span class='op'>(</span><span class='va'>`Number Of Hours Worked Each Week`</span>, <span class='st'>"1-14"</span> <span class='op'>=</span> <span class='st'>"01-14 HOURS"</span>,
+                                                         <span class='st'>"15-34"</span> <span class='op'>=</span> <span class='st'>"15-34 HOURS"</span>, <span class='st'>"35+"</span> <span class='op'>=</span> <span class='st'>"35 HOURS OR MORE"</span><span class='op'>)</span><span class='op'>)</span> <span class='op'><a href='https://rdrr.io/pkg/magrittr/man/pipe.html'>%&gt;%</a></span> 
+  <span class='fu'><a href='https://rdrr.io/pkg/dplyr/man/mutate.html'>mutate</a></span><span class='op'>(</span>Transgender <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/pkg/forcats/man/fct_recode.html'>fct_recode</a></span><span class='op'>(</span><span class='va'>Transgender</span>, <span class='st'>"NOT TRANSGENDER"</span> <span class='op'>=</span> <span class='st'>"NO, NOT TRANSGENDER"</span>,
+                                  <span class='st'>"TRANSGENDER"</span> <span class='op'>=</span> <span class='st'>"YES, TRANSGENDER"</span><span class='op'>)</span><span class='op'>)</span> <span class='op'><a href='https://rdrr.io/pkg/magrittr/man/pipe.html'>%&gt;%</a></span> 
+  <span class='fu'><a href='https://rdrr.io/pkg/dplyr/man/mutate.html'>mutate</a></span><span class='op'>(</span>`Hispanic Ethnicity` <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/pkg/forcats/man/fct_recode.html'>fct_recode</a></span><span class='op'>(</span><span class='va'>`Hispanic Ethnicity`</span>, <span class='st'>"NOT HISPANIC/LATINO"</span> <span class='op'>=</span> <span class='st'>"NO, NOT HISPANIC/LATINO"</span>, <span class='st'>"HISPANIC/LATINO"</span> <span class='op'>=</span> <span class='st'>"YES, HISPANIC/LATINO"</span><span class='op'>)</span><span class='op'>)</span>
+</code></pre>
+</div>
+</div>
+<p>We removed unknown/not answered values for each variable.</p>
+<h1 id="data-viz">Data Viz</h1>
+<p>In our to get a sense of our data we first look at the two most basic demographic features we decided to focus on: transgender identity and race.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>p3</span> <span class='op'>&lt;-</span> <span class='va'>survey_cleaned</span> <span class='op'><a href='https://rdrr.io/pkg/magrittr/man/pipe.html'>%&gt;%</a></span>
+  <span class='fu'><a href='https://rdrr.io/pkg/ggplot2/man/ggplot.html'>ggplot</a></span><span class='op'>(</span><span class='op'>)</span><span class='op'>+</span>
+  <span class='fu'><a href='https://rdrr.io/pkg/ggplot2/man/geom_bar.html'>geom_bar</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/pkg/ggplot2/man/aes.html'>aes</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>Transgender</span>, fill <span class='op'>=</span> <span class='va'>Transgender</span><span class='op'>)</span><span class='op'>)</span><span class='op'>+</span>
+  <span class='fu'><a href='https://rdrr.io/pkg/ggplot2/man/labs.html'>labs</a></span><span class='op'>(</span>title <span class='op'>=</span> <span class='st'>"Figure 1: Transgender Identity"</span><span class='op'>)</span><span class='op'>+</span>
+  <span class='fu'><a href='https://rdrr.io/pkg/ggplot2/man/theme.html'>theme</a></span><span class='op'>(</span>legend.position <span class='op'>=</span> <span class='st'>"bottom"</span>, legend.title <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/pkg/ggplot2/man/element.html'>element_blank</a></span><span class='op'>(</span><span class='op'>)</span><span class='op'>)</span>
+
+<span class='va'>p4</span> <span class='op'>&lt;-</span> <span class='va'>survey_cleaned</span> <span class='op'><a href='https://rdrr.io/pkg/magrittr/man/pipe.html'>%&gt;%</a></span>
+  <span class='fu'><a href='https://rdrr.io/pkg/ggplot2/man/ggplot.html'>ggplot</a></span><span class='op'>(</span><span class='op'>)</span><span class='op'>+</span>
+  <span class='fu'><a href='https://rdrr.io/pkg/ggplot2/man/geom_bar.html'>geom_bar</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/pkg/ggplot2/man/aes.html'>aes</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>Race</span>, fill <span class='op'>=</span> <span class='va'>`Hispanic Ethnicity`</span><span class='op'>)</span><span class='op'>)</span><span class='op'>+</span>
+  <span class='fu'><a href='https://rdrr.io/pkg/ggplot2/man/labs.html'>labs</a></span><span class='op'>(</span>title <span class='op'>=</span> <span class='st'>"Figure 2: Race &amp; Ethnicity"</span><span class='op'>)</span><span class='op'>+</span>
+  <span class='fu'><a href='https://rdrr.io/pkg/ggplot2/man/theme.html'>theme</a></span><span class='op'>(</span>axis.text.x <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/pkg/ggplot2/man/element.html'>element_text</a></span><span class='op'>(</span>angle<span class='op'>=</span><span class='fl'>20</span><span class='op'>)</span>, legend.position <span class='op'>=</span> <span class='st'>"bottom"</span>, legend.title <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/pkg/ggplot2/man/element.html'>element_blank</a></span><span class='op'>(</span><span class='op'>)</span><span class='op'>)</span>
+
+<span class='va'>p5</span> <span class='op'>&lt;-</span> <span class='va'>survey_cleaned</span> <span class='op'><a href='https://rdrr.io/pkg/magrittr/man/pipe.html'>%&gt;%</a></span> 
+  <span class='fu'><a href='https://rdrr.io/pkg/ggplot2/man/ggplot.html'>ggplot</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/pkg/ggplot2/man/aes.html'>aes</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>Transgender</span>, fill <span class='op'>=</span> <span class='va'>Race</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'><a href='https://rdrr.io/pkg/ggplot2/man/labs.html'>labs</a></span><span class='op'>(</span>title <span class='op'>=</span> <span class='st'>"Figure 3: Race &amp; Transgender Identity"</span><span class='op'>)</span><span class='op'>+</span>
+  <span class='fu'><a href='https://rdrr.io/pkg/ggplot2/man/geom_bar.html'>geom_bar</a></span><span class='op'>(</span>position <span class='op'>=</span> <span class='st'>"fill"</span><span class='op'>)</span><span class='op'>+</span>
+  <span class='fu'><a href='https://rdrr.io/pkg/ggplot2/man/theme.html'>theme</a></span><span class='op'>(</span>legend.title <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/pkg/ggplot2/man/element.html'>element_blank</a></span><span class='op'>(</span><span class='op'>)</span><span class='op'>)</span>
+
+<span class='va'>p3</span> <span class='op'>|</span> <span class='va'>p4</span>
+</code></pre>
+</div>
+<img src="Bayesian-Statistcs_files/figure-html5/unnamed-chunk-10-1.png" width="768" />
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>p5</span>
+</code></pre>
+</div>
+<p><img src="Bayesian-Statistcs_files/figure-html5/unnamed-chunk-10-2.png" width="768" /></p>
+</div>
+<p>After cleaning we still see that the majority of patients are not transgender (figure 1).</p>
+<p>This survey collected information on race (“Black only”, “white only”, “multiracial”, or “other”) and ethnicity (“Hispanic/Latino” or not) separately. We can see that the sample has about twice as many “white only” respondents as “Black only” respondents. We also see that there are respondents identified as “Hispanic/Latino” in all four racial categories collected, with the highest number in the category “other” (figure 2).</p>
+<p>Additionally, we can see that a slightly higher percentage of transgender patients were “white only”, compared to patients who are not transgender (figure 3). Just over 50% of both groups were “white only”, and around 25% were “Black only” (figure 3).</p>
+<p>Next, we looked for any easily visible differences in mental health outcomes by transgender identity in this population.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>p6</span> <span class='op'>&lt;-</span> <span class='va'>survey_cleaned</span> <span class='op'><a href='https://rdrr.io/pkg/magrittr/man/pipe.html'>%&gt;%</a></span> 
+  <span class='fu'><a href='https://rdrr.io/pkg/ggplot2/man/ggplot.html'>ggplot</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/pkg/ggplot2/man/aes.html'>aes</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>Transgender</span>, fill <span class='op'>=</span> <span class='va'>`Alcohol Related Disorder`</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'><a href='https://rdrr.io/pkg/ggplot2/man/geom_bar.html'>geom_bar</a></span><span class='op'>(</span>position <span class='op'>=</span> <span class='st'>"fill"</span><span class='op'>)</span><span class='op'>+</span>
+  <span class='fu'><a href='https://rdrr.io/pkg/ggplot2/man/labs.html'>labs</a></span><span class='op'>(</span>title <span class='op'>=</span> <span class='st'>"Figure 6: Alcohol Related Disorder"</span><span class='op'>)</span><span class='op'>+</span>
+  <span class='fu'><a href='https://rdrr.io/pkg/ggplot2/man/theme.html'>theme</a></span><span class='op'>(</span>legend.position <span class='op'>=</span> <span class='st'>"bottom"</span><span class='op'>)</span>
+
+<span class='va'>p7</span> <span class='op'>&lt;-</span> <span class='va'>survey_cleaned</span> <span class='op'><a href='https://rdrr.io/pkg/magrittr/man/pipe.html'>%&gt;%</a></span> 
+  <span class='fu'><a href='https://rdrr.io/pkg/ggplot2/man/ggplot.html'>ggplot</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/pkg/ggplot2/man/aes.html'>aes</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>Transgender</span>, fill <span class='op'>=</span> <span class='va'>`Drug Substance Disorder`</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'><a href='https://rdrr.io/pkg/ggplot2/man/geom_bar.html'>geom_bar</a></span><span class='op'>(</span>position <span class='op'>=</span> <span class='st'>"fill"</span><span class='op'>)</span><span class='op'>+</span>
+  <span class='fu'><a href='https://rdrr.io/pkg/ggplot2/man/labs.html'>labs</a></span><span class='op'>(</span>title <span class='op'>=</span> <span class='st'>"Figure 7: Drug Substance Disorder"</span><span class='op'>)</span><span class='op'>+</span>
+  <span class='fu'><a href='https://rdrr.io/pkg/ggplot2/man/theme.html'>theme</a></span><span class='op'>(</span>legend.position <span class='op'>=</span> <span class='st'>"bottom"</span><span class='op'>)</span>
+
+<span class='va'>p8</span> <span class='op'>&lt;-</span> <span class='va'>survey_cleaned</span> <span class='op'><a href='https://rdrr.io/pkg/magrittr/man/pipe.html'>%&gt;%</a></span> 
+  <span class='fu'><a href='https://rdrr.io/pkg/ggplot2/man/ggplot.html'>ggplot</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/pkg/ggplot2/man/aes.html'>aes</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>`Transgender`</span>, fill <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>as.factor</a></span><span class='op'>(</span><span class='va'>`Serious Mental Illness`</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'><a href='https://rdrr.io/pkg/ggplot2/man/geom_bar.html'>geom_bar</a></span><span class='op'>(</span>position <span class='op'>=</span> <span class='st'>"fill"</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'><a href='https://rdrr.io/pkg/ggplot2/man/labs.html'>labs</a></span><span class='op'>(</span>title <span class='op'>=</span> <span class='st'>"Figure 5: Serious Mental Illness"</span><span class='op'>)</span><span class='op'>+</span>
+  <span class='fu'><a href='https://rdrr.io/pkg/ggplot2/man/theme.html'>theme</a></span><span class='op'>(</span>legend.position <span class='op'>=</span> <span class='st'>"bottom"</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'><a href='https://rdrr.io/pkg/ggplot2/man/labs.html'>labs</a></span><span class='op'>(</span>fill <span class='op'>=</span> <span class='st'>"Serious Mental Illness"</span><span class='op'>)</span>
+
+<span class='va'>p9</span> <span class='op'>&lt;-</span> <span class='va'>survey_cleaned</span> <span class='op'><a href='https://rdrr.io/pkg/magrittr/man/pipe.html'>%&gt;%</a></span> 
+  <span class='fu'><a href='https://rdrr.io/pkg/ggplot2/man/ggplot.html'>ggplot</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/pkg/ggplot2/man/aes.html'>aes</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>`Transgender`</span>, fill <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>as.factor</a></span><span class='op'>(</span><span class='va'>`Mental Illness`</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'><a href='https://rdrr.io/pkg/ggplot2/man/geom_bar.html'>geom_bar</a></span><span class='op'>(</span>position <span class='op'>=</span> <span class='st'>"fill"</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'><a href='https://rdrr.io/pkg/ggplot2/man/labs.html'>labs</a></span><span class='op'>(</span>title <span class='op'>=</span> <span class='st'>"Figure 4: Mental Illness"</span><span class='op'>)</span><span class='op'>+</span>
+  <span class='fu'><a href='https://rdrr.io/pkg/ggplot2/man/theme.html'>theme</a></span><span class='op'>(</span>legend.position <span class='op'>=</span> <span class='st'>"bottom"</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'><a href='https://rdrr.io/pkg/ggplot2/man/labs.html'>labs</a></span><span class='op'>(</span>fill <span class='op'>=</span> <span class='st'>"Mental Illness"</span><span class='op'>)</span>
+
+<span class='va'>p9</span> <span class='op'>|</span> <span class='va'>p8</span>
+</code></pre>
+</div>
+<img src="Bayesian-Statistcs_files/figure-html5/unnamed-chunk-11-1.png" width="768" />
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>p6</span> <span class='op'>|</span> <span class='va'>p7</span>
+</code></pre>
+</div>
+<p><img src="Bayesian-Statistcs_files/figure-html5/unnamed-chunk-11-2.png" width="768" /></p>
+</div>
+<p>We can see that there is almost no visible difference between transgender and cisgender (not transgender) patients for any of the four mental health outcomes (figures 4, 5, 6, &amp; 7). We also see that almost our entire sample has mental illness (figure 4), over 90% have serious mental illness (figure 5), and around an 8th have alcohol and/or substance disorders (figures 6 &amp; 7).</p>
+<p>Because none of these outcome variables seemed more related to transgender identity than another, and because there were almost no patients without mental illness, we chose serious mental illness as our outcome variable.</p>
+<p>Next, we visualized how the other demographic variables we were interested in related to serious mental illness.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>p10</span> <span class='op'>&lt;-</span> <span class='va'>survey_cleaned</span> <span class='op'><a href='https://rdrr.io/pkg/magrittr/man/pipe.html'>%&gt;%</a></span> 
+  <span class='fu'><a href='https://rdrr.io/pkg/ggplot2/man/ggplot.html'>ggplot</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/pkg/ggplot2/man/aes.html'>aes</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>`Race`</span>, fill <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>as.factor</a></span><span class='op'>(</span><span class='va'>`Serious Mental Illness`</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'><a href='https://rdrr.io/pkg/ggplot2/man/geom_bar.html'>geom_bar</a></span><span class='op'>(</span>position <span class='op'>=</span> <span class='st'>"fill"</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'><a href='https://rdrr.io/pkg/ggplot2/man/labs.html'>labs</a></span><span class='op'>(</span>title <span class='op'>=</span> <span class='st'>"Figure 8: Serious Mental Illness by Race"</span><span class='op'>)</span><span class='op'>+</span>
+  <span class='fu'><a href='https://rdrr.io/pkg/ggplot2/man/theme.html'>theme</a></span><span class='op'>(</span>legend.position <span class='op'>=</span> <span class='st'>"bottom"</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'><a href='https://rdrr.io/pkg/ggplot2/man/labs.html'>labs</a></span><span class='op'>(</span>fill <span class='op'>=</span> <span class='st'>"Serious Mental Illness"</span><span class='op'>)</span>
+
+<span class='va'>p11</span> <span class='op'>&lt;-</span> <span class='va'>survey_cleaned</span> <span class='op'><a href='https://rdrr.io/pkg/magrittr/man/pipe.html'>%&gt;%</a></span> 
+  <span class='fu'><a href='https://rdrr.io/pkg/ggplot2/man/ggplot.html'>ggplot</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/pkg/ggplot2/man/aes.html'>aes</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>`Age Group`</span>, fill <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>as.factor</a></span><span class='op'>(</span><span class='va'>`Serious Mental Illness`</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'><a href='https://rdrr.io/pkg/ggplot2/man/geom_bar.html'>geom_bar</a></span><span class='op'>(</span>position <span class='op'>=</span> <span class='st'>"fill"</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'><a href='https://rdrr.io/pkg/ggplot2/man/labs.html'>labs</a></span><span class='op'>(</span>title <span class='op'>=</span> <span class='st'>"Figure 9: Serious Mental Illness by Age"</span><span class='op'>)</span><span class='op'>+</span>
+  <span class='fu'><a href='https://rdrr.io/pkg/ggplot2/man/theme.html'>theme</a></span><span class='op'>(</span>legend.position <span class='op'>=</span> <span class='st'>"bottom"</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'><a href='https://rdrr.io/pkg/ggplot2/man/labs.html'>labs</a></span><span class='op'>(</span>fill <span class='op'>=</span> <span class='st'>"Serious Mental Illness"</span><span class='op'>)</span>
+
+<span class='va'>p12</span> <span class='op'>&lt;-</span> <span class='va'>survey_cleaned</span> <span class='op'><a href='https://rdrr.io/pkg/magrittr/man/pipe.html'>%&gt;%</a></span> 
+  <span class='fu'><a href='https://rdrr.io/pkg/ggplot2/man/ggplot.html'>ggplot</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/pkg/ggplot2/man/aes.html'>aes</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>`Number Of Hours Worked Each Week`</span>, fill <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>as.factor</a></span><span class='op'>(</span><span class='va'>`Serious Mental Illness`</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'><a href='https://rdrr.io/pkg/ggplot2/man/geom_bar.html'>geom_bar</a></span><span class='op'>(</span>position <span class='op'>=</span> <span class='st'>"fill"</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'><a href='https://rdrr.io/pkg/ggplot2/man/labs.html'>labs</a></span><span class='op'>(</span>title <span class='op'>=</span> <span class='st'>"Figure 10: Serious Mental Illness by Hours Worked"</span><span class='op'>)</span><span class='op'>+</span>
+  <span class='fu'><a href='https://rdrr.io/pkg/ggplot2/man/theme.html'>theme</a></span><span class='op'>(</span>legend.position <span class='op'>=</span> <span class='st'>"bottom"</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'><a href='https://rdrr.io/pkg/ggplot2/man/labs.html'>labs</a></span><span class='op'>(</span>fill <span class='op'>=</span> <span class='st'>"Serious Mental Illness"</span><span class='op'>)</span>
+
+<span class='va'>p13</span> <span class='op'>&lt;-</span> <span class='va'>survey_cleaned</span> <span class='op'><a href='https://rdrr.io/pkg/magrittr/man/pipe.html'>%&gt;%</a></span> 
+  <span class='fu'><a href='https://rdrr.io/pkg/ggplot2/man/ggplot.html'>ggplot</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/pkg/ggplot2/man/aes.html'>aes</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/pkg/forcats/man/fct_relevel.html'>fct_relevel</a></span><span class='op'>(</span><span class='va'>`Education Status`</span>, <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"NO FORMAL EDUCATION"</span>, <span class='st'>"PRE-K TO FIFTH GRADE"</span>, <span class='st'>"MIDDLE SCHOOL TO HIGH SCHOOL"</span>, <span class='st'>"SOME COLLEGE"</span>, <span class='st'>"COLLEGE OR GRADUATE DEGREE"</span>, <span class='st'>"OTHER"</span><span class='op'>)</span><span class='op'>)</span>, fill <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>as.factor</a></span><span class='op'>(</span><span class='va'>`Serious Mental Illness`</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'><a href='https://rdrr.io/pkg/ggplot2/man/geom_bar.html'>geom_bar</a></span><span class='op'>(</span>position <span class='op'>=</span> <span class='st'>"fill"</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'><a href='https://rdrr.io/pkg/ggplot2/man/labs.html'>labs</a></span><span class='op'>(</span>title <span class='op'>=</span> <span class='st'>"Figure 11: Serious Mental Illness by Education"</span><span class='op'>)</span><span class='op'>+</span>
+  <span class='fu'><a href='https://rdrr.io/pkg/ggplot2/man/theme.html'>theme</a></span><span class='op'>(</span>axis.text.x <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/pkg/ggplot2/man/element.html'>element_text</a></span><span class='op'>(</span>angle<span class='op'>=</span><span class='fl'>20</span><span class='op'>)</span>, legend.position <span class='op'>=</span> <span class='st'>"bottom"</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'><a href='https://rdrr.io/pkg/ggplot2/man/labs.html'>labs</a></span><span class='op'>(</span>fill <span class='op'>=</span> <span class='st'>"Serious Mental Illness"</span>, x <span class='op'>=</span> <span class='st'>"Education status"</span><span class='op'>)</span>
+
+<span class='va'>p10</span> <span class='op'>|</span> <span class='va'>p11</span>
+</code></pre>
+</div>
+<img src="Bayesian-Statistcs_files/figure-html5/unnamed-chunk-12-1.png" width="960" />
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>p12</span> <span class='op'>|</span> <span class='va'>p13</span>
+</code></pre>
+</div>
+<p><img src="Bayesian-Statistcs_files/figure-html5/unnamed-chunk-12-2.png" width="960" /></p>
+</div>
+<p>We see no clear difference in serious mental illness by race (figure 8). Child patients, however, appear to be less likely than adult patients to have serious mental illness (figure 9). Additionally, the more hours a patient works each week, it appears slightly less likely that they have serious mental illness (figure 10). Perhaps related to age, less education (this does not control for age) appears associated with being less likely to have serious mental illness (figure 11).</p>
+<p>We made many more plots that are not included here, playing with different arrangements of these variables. The only one that was interesting enough to include looked at both transgender identity and age as predictors of serious mental illness.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>p14</span> <span class='op'>&lt;-</span> <span class='va'>survey_cleaned</span> <span class='op'><a href='https://rdrr.io/pkg/magrittr/man/pipe.html'>%&gt;%</a></span>
+  <span class='fu'><a href='https://rdrr.io/pkg/ggplot2/man/ggplot.html'>ggplot</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/pkg/ggplot2/man/aes.html'>aes</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>`Transgender`</span>, fill <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>as.factor</a></span><span class='op'>(</span><span class='va'>`Serious Mental Illness`</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'><a href='https://rdrr.io/pkg/ggplot2/man/geom_bar.html'>geom_bar</a></span><span class='op'>(</span>position <span class='op'>=</span> <span class='st'>"fill"</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'><a href='https://rdrr.io/pkg/ggplot2/man/facet_wrap.html'>facet_wrap</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/pkg/dplyr/man/vars.html'>vars</a></span><span class='op'>(</span><span class='va'>`Age Group`</span><span class='op'>)</span><span class='op'>)</span><span class='op'>+</span>
+  <span class='fu'><a href='https://rdrr.io/pkg/ggplot2/man/labs.html'>labs</a></span><span class='op'>(</span>title <span class='op'>=</span> <span class='st'>"Figure 12: Serious Mental Illness by Age &amp; Trans Identity"</span><span class='op'>)</span><span class='op'>+</span>
+  <span class='fu'><a href='https://rdrr.io/pkg/ggplot2/man/theme.html'>theme</a></span><span class='op'>(</span>legend.position <span class='op'>=</span> <span class='st'>"bottom"</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'><a href='https://rdrr.io/pkg/ggplot2/man/labs.html'>labs</a></span><span class='op'>(</span>fill <span class='op'>=</span> <span class='st'>"Serious Mental Illness"</span><span class='op'>)</span>
+
+<span class='va'>p14</span>
+</code></pre>
+</div>
+<p><img src="Bayesian-Statistcs_files/figure-html5/unnamed-chunk-13-1.png" width="624" /></p>
+</div>
+<p>Here we see in figure 12 that while there is no difference in serious mental illness between trans and cis patients among adults, child patients who are transgender appear considerably more likely than their cis peers to have serious mental illness.</p>
+<p>Overall this data visualization affirmed that the population in this survey is unique – it does not show the dramatic trends of worse mental health outcomes for trans people found in the larger population. Our data visualization also indicates that age, hours worked, and education may be our most important predictor variables for serious mental illness.</p>
+<h1 id="model-building">Model Building</h1>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/base/Random.html'>set.seed</a></span><span class='op'>(</span><span class='fl'>494</span><span class='op'>)</span>
+<span class='va'>small_survey</span> <span class='op'>&lt;-</span> <span class='va'>survey_cleaned</span> <span class='op'><a href='https://rdrr.io/pkg/magrittr/man/pipe.html'>%&gt;%</a></span>
+  <span class='fu'><a href='https://rdrr.io/pkg/dplyr/man/group_by.html'>group_by</a></span><span class='op'>(</span><span class='va'>Transgender</span><span class='op'>)</span> <span class='op'><a href='https://rdrr.io/pkg/magrittr/man/pipe.html'>%&gt;%</a></span>
+  <span class='fu'><a href='https://rdrr.io/pkg/dplyr/man/sample_n.html'>sample_frac</a></span><span class='op'>(</span><span class='fl'>0.1</span><span class='op'>)</span> <span class='op'><a href='https://rdrr.io/pkg/magrittr/man/pipe.html'>%&gt;%</a></span>
+  <span class='fu'><a href='https://rdrr.io/pkg/dplyr/man/group_by.html'>ungroup</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'><a href='https://rdrr.io/pkg/magrittr/man/pipe.html'>%&gt;%</a></span> 
+  <span class='fu'><a href='https://rdrr.io/pkg/dplyr/man/rename.html'>rename</a></span><span class='op'>(</span>serious <span class='op'>=</span> <span class='st'>'Serious Mental Illness'</span><span class='op'>)</span> <span class='op'><a href='https://rdrr.io/pkg/magrittr/man/pipe.html'>%&gt;%</a></span>
+  <span class='fu'><a href='https://rdrr.io/pkg/dplyr/man/mutate_all.html'>mutate_if</a></span><span class='op'>(</span><span class='va'>is.character</span>,<span class='va'>as.factor</span><span class='op'>)</span> <span class='op'><a href='https://rdrr.io/pkg/magrittr/man/pipe.html'>%&gt;%</a></span>
+  <span class='fu'>dplyr</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/dplyr/man/select.html'>select</a></span><span class='op'>(</span><span class='va'>serious</span>, <span class='va'>Transgender</span>, <span class='va'>Race</span>, <span class='va'>`Sexual Orientation`</span>, <span class='va'>`Age Group`</span>, <span class='va'>`Education Status`</span>, <span class='va'>`Alcohol Related Disorder`</span>, <span class='va'>`Drug Substance Disorder`</span>, <span class='va'>`Number Of Hours Worked Each Week`</span><span class='op'>)</span> <span class='op'><a href='https://rdrr.io/pkg/magrittr/man/pipe.html'>%&gt;%</a></span>
+  <span class='fu'><a href='https://rdrr.io/pkg/dplyr/man/mutate.html'>mutate</a></span><span class='op'>(</span>serious <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>as.factor</a></span><span class='op'>(</span><span class='va'>serious</span><span class='op'>)</span><span class='op'>)</span> <span class='op'><a href='https://rdrr.io/pkg/magrittr/man/pipe.html'>%&gt;%</a></span> 
+  <span class='fu'><a href='https://rdrr.io/pkg/dplyr/man/mutate.html'>mutate</a></span><span class='op'>(</span>`Number Of Hours Worked Each Week` <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/pkg/forcats/man/fct_recode.html'>fct_recode</a></span><span class='op'>(</span><span class='va'>`Number Of Hours Worked Each Week`</span>, <span class='st'>"01-14 HOURS"</span> <span class='op'>=</span> <span class='st'>"1-14"</span>, <span class='st'>"15-34 HOURS"</span> <span class='op'>=</span> <span class='st'>"15-34"</span>, <span class='st'>"35 HOURS OR MORE"</span> <span class='op'>=</span> <span class='st'>"35+"</span><span class='op'>)</span><span class='op'>)</span> <span class='op'><a href='https://rdrr.io/pkg/magrittr/man/pipe.html'>%&gt;%</a></span> 
+  <span class='fu'><a href='https://rdrr.io/pkg/dplyr/man/mutate.html'>mutate</a></span><span class='op'>(</span>Transgender <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/pkg/forcats/man/fct_recode.html'>fct_recode</a></span><span class='op'>(</span><span class='va'>Transgender</span>, <span class='st'>"NO, NOT TRANSGENDER"</span> <span class='op'>=</span> <span class='st'>"NOT TRANSGENDER"</span>,
+                                  <span class='st'>"YES, TRANSGENDER"</span> <span class='op'>=</span> <span class='st'>"TRANSGENDER"</span><span class='op'>)</span><span class='op'>)</span>
+
+<span class='va'>small_survey</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/groupdata2/man/downsample.html'>downsample</a></span><span class='op'>(</span><span class='va'>small_survey</span>, <span class='st'>"serious"</span><span class='op'>)</span>
+</code></pre>
+</div>
+</div>
+<p>Because our data is very unbalanced and the majority of observations have serious mental illness, we decided to downsample so that there are equal amounts of patients with and without serious mental illness in our modeling data. In this way we can prevent models from classifying everything as having serious mental illness.</p>
+<p>Through model model building we hoped to examine how well various demographic factors can predict serious mental illness. Because our response variable (serious mental illness) is binary, we had two options: Naive Bayes and Logistic Regression. For each, we began by examining transgender identity and race separately. Our preference is logistic regression because we would like to know which predictors are more important and how they influence the outcome. Although Naive Bayes does not satisfy this aspect, we still wanted to build and see if it can produce better accuracy. Later we decided that Naive Bayes was not useful to our project, and instead created more Logistic Regression models with more variables.</p>
+<h2 id="naive-bayes">Naive Bayes</h2>
+<p><span class="math display">\[
+f(\text{Serious Mental Illness}|\text{Transgender})\sim f(\text{Serious Mental Illness})L(\text{Serious Mental Illness}|\text{Transgender})
+\]</span></p>
+<p>f(Serious Mental Illness) can be calculated using numbers of patients with and without serious mental illness in the observations. The likelihood can be computed in the similar way.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'># naive Bayes model trans predicts serious</span>
+<span class='va'>naive_trans_serious</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/e1071/man/naiveBayes.html'>naiveBayes</a></span><span class='op'>(</span>
+  <span class='va'>serious</span> <span class='op'>~</span> <span class='va'>Transgender</span>,
+  data <span class='op'>=</span> <span class='va'>small_survey</span><span class='op'>)</span>
+</code></pre>
+</div>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'># look at trans predicts serious naive Bayes model</span>
+<span class='fu'><a href='https://rdrr.io/pkg/bayesrules/man/naive_classification_summary_cv.html'>naive_classification_summary_cv</a></span><span class='op'>(</span>model <span class='op'>=</span> <span class='va'>naive_trans_serious</span>, data <span class='op'>=</span> <span class='va'>small_survey</span>, y<span class='op'>=</span><span class='st'>"serious"</span>, k<span class='op'>=</span><span class='fl'>10</span><span class='op'>)</span>
+</code></pre>
+</div>
+<pre><code>$folds
+   fold        NO        YES overall_accuracy
+1     1 0.0000000 1.00000000        0.4842767
+2     2 1.0000000 0.01149425        0.4591195
+3     3 1.0000000 0.03703704        0.5094340
+4     4 0.9729730 0.00000000        0.4556962
+5     5 1.0000000 0.00000000        0.5031447
+6     6 0.0000000 1.00000000        0.4591195
+7     7 1.0000000 0.01282051        0.5126582
+8     8 0.0000000 1.00000000        0.4779874
+9     9 0.0000000 1.00000000        0.4528302
+10   10 0.9861111 0.00000000        0.4465409
+
+$cv
+ serious           NO          YES
+      NO 57.05% (453) 42.95% (341)
+     YES 61.84% (491) 38.16% (303)</code></pre>
+</div>
+<p>Sensitivity refers to the proportion of those who have the condition that received a positive result on a test. In this case it means what proportion of patients who have serious mental illness are categorized as having serious mental illness by our model. Specificity refers to the proportion of those who do not have the condition that received a negative result on a test. In this case it means what proportion of patients who do no have serious mental illness are categorized as not having serious mental illness by our model.</p>
+<p>Model #1: After down sampling, this Naive Bayes model, which uses only Transgender as a predictor, no longer classifies everyone as seriously mentally ill. However, looking at the classification summary we can see that this model does a really poor job classifying patients, with a sensitivity of 38.16% – worse than chance – and a specificity of 57.05% – barely above chance. From this we might conclude Transgender alone is a poor predictor of serious mental illness among patients using public mental health services and this Naive Bayes model is not a preferred one.</p>
+<p><span class="math display">\[
+f(\text{Serious Mental Illness}|\text{Race})\sim f(\text{Serious Mental Illness})L(\text{Serious Mental Illness}|\text{Race})
+\]</span></p>
+<p>f(Serious Mental Illness) can be calculated using numbers of patients with and without serious mental illness in the observations. The likelihood can be computed in the similar way.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'># naive Bayes model with Race predicts serious</span>
+<span class='va'>naive_race_serious</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/e1071/man/naiveBayes.html'>naiveBayes</a></span><span class='op'>(</span>
+  <span class='va'>serious</span> <span class='op'>~</span> <span class='va'>Race</span>,
+  data <span class='op'>=</span> <span class='va'>small_survey</span><span class='op'>)</span>
+</code></pre>
+</div>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'># look at serious predicts Race naive Bayes model</span>
+<span class='fu'><a href='https://rdrr.io/pkg/bayesrules/man/naive_classification_summary_cv.html'>naive_classification_summary_cv</a></span><span class='op'>(</span>model <span class='op'>=</span> <span class='va'>naive_race_serious</span>, data <span class='op'>=</span> <span class='va'>small_survey</span>, y<span class='op'>=</span><span class='st'>"serious"</span>, k<span class='op'>=</span><span class='fl'>10</span><span class='op'>)</span>
+</code></pre>
+</div>
+<pre><code>$folds
+   fold        NO       YES overall_accuracy
+1     1 0.8395062 0.2435897        0.5471698
+2     2 0.8148148 0.2179487        0.5220126
+3     3 0.8493151 0.2558140        0.5283019
+4     4 0.7236842 0.2682927        0.4873418
+5     5 0.7972973 0.2705882        0.5157233
+6     6 0.7341772 0.3500000        0.5408805
+7     7 0.8292683 0.1973684        0.5253165
+8     8 0.7750000 0.3291139        0.5534591
+9     9 0.8539326 0.3142857        0.6163522
+10   10 0.8227848 0.3750000        0.5974843
+
+$cv
+ serious           NO          YES
+      NO 80.48% (639) 19.52% (155)
+     YES 71.79% (570) 28.21% (224)</code></pre>
+</div>
+<p>Model #2: This model, using only race as a predictor of serious mental illness, has a tendency to classify patients as not having serious mental illness, with a specificity of 80.48% and sensitivity of 28.21%. This also indicates that this model does not do a great job at predicting serious mental illness, so race also may not be a good predictor.</p>
+<p>Take-away: Since with Naive Bayes we cannot analyze the impact of individual predictors, we decided for the rest of our project to use logistic models.</p>
+<h2 id="logistic-regression">Logistic Regression</h2>
+<p><span class="math display">\[
+\begin{aligned}
+&amp;\text{Serious Mental Illness}|\beta_0, \beta_1, \beta_2, \beta_3, \beta_4, \beta_5, \beta_6, \beta_7, \sigma\overset{\text{ind}}{\sim}\text{Bern}(\pi_i)
+\\
+&amp;\text{where }\text{log}(\frac{\pi_i}{1-\pi_i})=\beta_0 + \beta_1\text{Transgender} + \beta_2\text{RaceMULTI} + \beta_3\text{RaceOTHER}
+\\
+&amp; + \beta_4\text{RaceWHITE} + \beta_5\text{SexualOrientationLESBIAN|GAY}
+\\
+&amp; + \beta_6\text{SexualOrientationOTHER} + \beta_7\text{SexualOrientationSTRAIGHT|HETEROSEXUAL}
+\\
+&amp;\beta_0\sim\text{N}(0, s_0^2)
+\\
+&amp;\beta_1\sim\text{N}(0, s_1^2)
+\\
+&amp;\beta_2\sim\text{N}(0, s_2^2)
+\\
+&amp;\beta_3\sim\text{N}(0, s_3^2)
+\\
+&amp;\beta_4\sim\text{N}(0, s_4^2)
+\\
+&amp;\beta_5\sim\text{N}(0, s_5^2)
+\\
+&amp;\beta_6\sim\text{N}(0, s_6^2)
+\\
+&amp;\beta_7\sim\text{N}(0, s_7^2)
+\end{aligned}
+\]</span></p>
+<p>We chose a weakly informative prior with coefficients centered around 0 with wide variances. Race and Sexual Orientation each has 4 categories.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>logistic3</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://mc-stan.org/rstanarm/reference/stan_glm.html'>stan_glm</a></span><span class='op'>(</span>
+  <span class='va'>serious</span> <span class='op'>~</span> <span class='va'>Transgender</span> <span class='op'>+</span> <span class='va'>Race</span> <span class='op'>+</span> <span class='va'>`Sexual Orientation`</span>,
+  data <span class='op'>=</span> <span class='va'>small_survey</span>,
+  family <span class='op'>=</span> <span class='va'>binomial</span>,
+  chains <span class='op'>=</span> <span class='fl'>4</span>, iter <span class='op'>=</span> <span class='fl'>5000</span><span class='op'>*</span><span class='fl'>2</span>, seed <span class='op'>=</span> <span class='fl'>84735</span>, refresh <span class='op'>=</span> <span class='fl'>0</span><span class='op'>)</span>
+
+<span class='co'># Save an object to a file</span>
+<span class='fu'><a href='https://rdrr.io/r/base/readRDS.html'>saveRDS</a></span><span class='op'>(</span><span class='va'>logistic3</span>, file <span class='op'>=</span> <span class='st'>"logistic3.rds"</span><span class='op'>)</span>
+</code></pre>
+</div>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>logistic3</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/readRDS.html'>readRDS</a></span><span class='op'>(</span>file <span class='op'>=</span> <span class='st'>"logistic3.rds"</span><span class='op'>)</span>
+
+<span class='fu'><a href='https://rdrr.io/pkg/bayesrules/man/classification_summary.html'>classification_summary</a></span><span class='op'>(</span>model <span class='op'>=</span> <span class='va'>logistic3</span>, data <span class='op'>=</span> <span class='va'>small_survey</span><span class='op'>)</span>
+</code></pre>
+</div>
+<pre><code>$confusion_matrix
+   y   0   1
+  NO 624 170
+ YES 546 248
+
+$accuracy_rates
+                          
+sensitivity      0.3123426
+specificity      0.7858942
+overall_accuracy 0.5491184</code></pre>
+</div>
+<p>Model #3: This logistic model uses transgender, race, and sexual orientation to predict serious mental illness. The sensitivity is much lower than the specificity – meaning this model has a tendency to categorize patients as not seriously mentally ill when they are, but when patients are categorized as mentally ill they (most) likely are. Overall the accuracy of the model is very low at 0.549 – barely above chance because our response variable is binary.</p>
+<p><span class="math display">\[
+\begin{aligned}
+&amp;\text{Serious Mental Illness}|\beta_0, \beta_1, \beta_2, \beta_3, \cdots, \sigma\overset{\text{ind}}{\sim}\text{Bern}(\pi_i)
+\\
+&amp;\text{where }\text{log}(\frac{\pi_i}{1-\pi_i})=\beta_0 + \beta_1{X_1} + \beta_2{X_2} + \beta_3{X_3} + \cdots
+\\
+&amp;X_i =  \text{Transgender, Race, Sexual Orientation, Age Group, Education Status,}
+\\
+&amp;\text{Alcohol Related Disorder, Drug Substance Disorder, Number of Hours Worked Each Week}
+\\
+&amp;\beta_0, \beta_1, \beta_2, \beta_3, \cdots\sim\text{N}(0, s_i^2)
+\end{aligned}
+\]</span></p>
+<p>We chose a weakly informative prior with coefficients centered around 0 with wide variances.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>logistic4</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://mc-stan.org/rstanarm/reference/stan_glm.html'>stan_glm</a></span><span class='op'>(</span>
+  <span class='va'>serious</span> <span class='op'>~</span> <span class='va'>Transgender</span> <span class='op'>+</span> <span class='va'>Race</span> <span class='op'>+</span> <span class='va'>`Sexual Orientation`</span> <span class='op'>+</span> <span class='va'>`Age Group`</span> <span class='op'>+</span> <span class='va'>`Education Status`</span> <span class='op'>+</span> <span class='va'>`Alcohol Related Disorder`</span> <span class='op'>+</span> <span class='va'>`Drug Substance Disorder`</span> <span class='op'>+</span> <span class='va'>`Number Of Hours Worked Each Week`</span>,
+  data <span class='op'>=</span> <span class='va'>small_survey</span>,
+  family <span class='op'>=</span> <span class='va'>binomial</span>,
+  chains <span class='op'>=</span> <span class='fl'>4</span>, iter <span class='op'>=</span> <span class='fl'>5000</span><span class='op'>*</span><span class='fl'>2</span>, seed <span class='op'>=</span> <span class='fl'>84735</span>, refresh <span class='op'>=</span> <span class='fl'>0</span><span class='op'>)</span>
+
+<span class='co'># Save an object to a file</span>
+<span class='fu'><a href='https://rdrr.io/r/base/readRDS.html'>saveRDS</a></span><span class='op'>(</span><span class='va'>logistic4</span>, file <span class='op'>=</span> <span class='st'>"logistic4.rds"</span><span class='op'>)</span>
+</code></pre>
+</div>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'># Restore the object</span>
+<span class='va'>logistic4</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/readRDS.html'>readRDS</a></span><span class='op'>(</span>file <span class='op'>=</span> <span class='st'>"logistic4.rds"</span><span class='op'>)</span>
+</code></pre>
+</div>
+</div>
+<h3 id="mcmc-simulation-diagnostics">MCMC Simulation Diagnostics</h3>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'># Trace plots</span>
+<span class='fu'><a href='https://mc-stan.org/bayesplot/reference/MCMC-traces.html'>mcmc_trace</a></span><span class='op'>(</span><span class='va'>logistic4</span><span class='op'>)</span>
+</code></pre>
+</div>
+<img src="Bayesian-Statistcs_files/figure-html5/unnamed-chunk-23-1.png" width="624" />
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'># Overlaid density plots</span>
+<span class='fu'><a href='https://mc-stan.org/bayesplot/reference/MCMC-distributions.html'>mcmc_dens_overlay</a></span><span class='op'>(</span><span class='va'>logistic4</span><span class='op'>)</span>
+</code></pre>
+</div>
+<p><img src="Bayesian-Statistcs_files/figure-html5/unnamed-chunk-23-2.png" width="624" /></p>
+</div>
+<p>Because we utilized MCMC simulation to build our model, the first thing we need to do is to check whether the simulation was well performed. The trace plots are random and overlaid density plots produce similar posterior approximations, so the simulation is stable and trustworthy.</p>
+<h3 id="posterior-predictive-check">Posterior Predictive Check</h3>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'># Construct a posterior predictive check</span>
+<span class='fu'><a href='https://mc-stan.org/rstanarm/reference/pp_check.stanreg.html'>pp_check</a></span><span class='op'>(</span><span class='va'>logistic4</span><span class='op'>)</span>
+</code></pre>
+</div>
+<p><img src="Bayesian-Statistcs_files/figure-html5/unnamed-chunk-24-1.png" width="624" /></p>
+</div>
+<p>Although we now have a better understanding of the simulation outcome, we are still not sure how the model is doing. So, the next question is, how wrong is the model? pp_check shows that the prediction is close to actual data and the model is not wrong.</p>
+<h3 id="model-evaluation-metrics">Model Evaluation Metrics</h3>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/pkg/bayesrules/man/classification_summary_cv.html'>classification_summary_cv</a></span><span class='op'>(</span>model <span class='op'>=</span> <span class='va'>logistic4</span>, data <span class='op'>=</span> <span class='va'>small_survey</span>, cutoff <span class='op'>=</span> <span class='fl'>0.6</span>, k <span class='op'>=</span> <span class='fl'>5</span><span class='op'>)</span><span class='op'>$</span><span class='va'>cv</span>
+</code></pre>
+</div>
+<pre><code>  sensitivity specificity overall_accuracy
+1   0.5333068   0.7050371        0.6183799</code></pre>
+</div>
+<p>Since logistic regression models produce a probability, how well they classify patients in our data set as seriously mentally ill or not depends on the cut off we choose. For example, in the classification summaries of the models above, if the model said there was &gt;0.6 probability of serious mental illness, the patient was classified as seriously mentally ill. When looking at model 4 we varied the cutoff between 0.6, 0.65, and 0.7, and used both regular and cross validated classification summaries.</p>
+<p>Across these 6 summaries overall accuracy ranged from 0.549 to 0.639, with lower accuracy the higher the cutoff, and with cv versus regular classification. Intuitively, sensitivity decreased and specificity increased as the cutoff was raised, ranging from 0.184 to 0.553 and 0.710 to 0.933 respectively. This model also had a tendency to classify patients as not having serious mental illness. We decided to use 0.6 as our cutoff in order to keep sensitivity, specificity, and overall accuracy all relatively high.</p>
+<h3 id="coefficient-interpretation">Coefficient Interpretation</h3>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/pkg/generics/man/tidy.html'>tidy</a></span><span class='op'>(</span><span class='va'>logistic4</span>, effects <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"fixed"</span>, <span class='st'>"aux"</span><span class='op'>)</span>, conf.int <span class='op'>=</span> <span class='cn'>TRUE</span>, conf.level <span class='op'>=</span> <span class='fl'>0.80</span><span class='op'>)</span>
+</code></pre>
+</div>
+<pre><code># A tibble: 20 x 5
+   term                          estimate std.error conf.low conf.high
+   &lt;chr&gt;                            &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;
+ 1 (Intercept)                     1.65      0.483    1.04      2.27  
+ 2 TransgenderYES, TRANSGENDER     0.281     0.608   -0.477     1.08  
+ 3 RaceMULTI-RACIAL               -0.368     0.324   -0.782     0.0405
+ 4 RaceOTHER                      -0.275     0.173   -0.498    -0.0496
+ 5 RaceWHITE ONLY                 -0.380     0.136   -0.555    -0.205 
+ 6 `Sexual Orientation`LESBIAN ~  -0.284     0.422   -0.822     0.267 
+ 7 `Sexual Orientation`OTHER       0.205     0.607   -0.592     0.979 
+ 8 `Sexual Orientation`STRAIGHT~  -0.204     0.339   -0.637     0.235 
+ 9 `Age Group`CHILD               -1.35      0.156   -1.55     -1.14  
+10 `Education Status`MIDDLE SCH~  -0.491     0.173   -0.715    -0.272 
+11 `Education Status`NO FORMAL ~  -1.99      1.32    -4.01     -0.481 
+12 `Education Status`OTHER         0.539     0.543   -0.137     1.28  
+13 `Education Status`PRE-K TO F~  -1.07      0.277   -1.43     -0.726 
+14 `Education Status`SOME COLLE~  -0.406     0.206   -0.670    -0.137 
+15 `Alcohol Related Disorder`YES   0.366     0.234    0.0649    0.668 
+16 `Drug Substance Disorder`YES    0.0856    0.183   -0.150     0.319 
+17 `Number Of Hours Worked Each~  -0.796     0.361   -1.26     -0.330 
+18 `Number Of Hours Worked Each~  -1.72      0.358   -2.18     -1.27  
+19 `Number Of Hours Worked Each~  -0.215     0.314   -0.621     0.191 
+20 mean_PPD                        0.5       0.0161   0.479     0.521 </code></pre>
+</div>
+<p>Model #4: This model uses every predictor variable we considered to predict serious mental illness: Transgender, Race, Sexual Orientation, Age Group, Education Status, Alcohol Related Disorder, Drug Substance Disorder, and Hours Worked. While some of these may be predictors of interest, others are there as controls. Thus, while looking at each of these predictors it’s important to remember the rest of them are controlled for.</p>
+<p>Transgender and sexual orientation: Both the transgender and all three sexual orientation coefficients had both positive and negative values within their 80% credible intervals, and so do not have a clear relationship with serious mental illness among patients using public mental health services. This may be because of the uniqueness of the population in this study, because increased risk of serious mental illness is well documented for queer and trans people (Goldenberg et al. 2019; McDowell, Hughto, &amp; Reisner, 2019; Flores et al., 2018; Bailey, Ellis, &amp; McNeil, 2014; Haas, Rodgers, &amp; Herman, 2014). The median estimate for transgender is exp(0.28)=1.32, meaning being transgender leads to a 1.32 times odds to have serious mental illness, holding other predictors constant. Similarly, the median estimate for <code>Sexual Orientation</code>LESBIAN OR GAY is -0.28, <code>Sexual Orientation</code>OTHER 0.21, and <code>Sexual Orientation</code>STRAIGHT OR HETEROSEXUAL -0.20. That is to say, LESBIAN OR GAY and STRAIGHT OR HETEROSEXUAL have 0.75 and 0.82 times the odds to have serious mental illness comparing to BISEXUAL while those who choose OTHER for <code>Sexual Orientation</code> have 1.23 times the odds comparing to BISEXUAL, controlling all other variables.</p>
+<p>Race: For this variable the model default was “Black only”. Both the “other” and “white only” racial category coefficients were negative across their 80% credible intervals, ranging from -0.498 to -0.050 and -0.555 to -0.205. The median estimates are -0.28 and -0.38 for the “other” and “white only” racial categories, meaning it is possible that patients who identified their race as “other” or “white only” have exp(-0.28)=0.75 and exp(-0.38)=0.68 times the odds to have serious mental illness compared to patients who identified their race as “Black only” (the model default), holding other predictors constant. Note: the “other” racial category we saw above was primarily Hispanic/Latino, but may also include Asian and Native Americans, or other racial categories that didn’t fit into either “Black only”, “white only”, or “multiracial”. The “multiracial” category had both positive and negative coefficient estimates in their 80% credible intervals, meaning there wasn’t a clear difference in prevalence of serious mental illness between “Black only” and “multiracial” patients. This may be indicative of a larger trend of anti-Blackness creating worse health outcomes for Black patients (especially considering many of the “multiracial” patients may be Black along with their other racial identities). There are documented disparities between white and Black people in healthcare, including greater difficulty accessing insurance and care, and poorer quality of care (Brenick, Romano, Kegler, &amp; Eaton, 2017). These disparities are exacerbated for queer Black people (Brenick, Romano, Kegler, &amp; Eaton, 2017). While the evidence from the unique population in this survey alone is not nearly enough to conclude this a sign of anti-Blackness, these results are in line with larger trends.</p>
+<p>Age group: The child coefficient estimate in the 80% credible interval ranges from -1.546 to -1.144, so it would appear that (when controlling for the other predictors in this model) a child patient using public mental health services is less likely (exp(-1.35)=0.26 times) than an adult patient to have serious mental illness – this makes sense given that many serious mental illnesses first develop in young adulthood.</p>
+<p>Education: First, it is important to remember this model controls for age. Counter-intuitively, the less education a patient has, it would seem according to this model, the less likely they are to have serious mental illness. The model default was the highest level of education on the survey: a college degree. The 80% credible interval of the coefficient estimate was -4.008 to -0.481 for no formal education, -1.434 to -0.726 for pre-K to 5th grade, -0.715 to -0.272 for middle to high school, and -0.670 to -0.137 for some college. That is to say, people in any of these groups are less likely to have serious mental illness comparing to people having a college degree, controlling all other variables. This result is the opposite of what McDowell, Hughto, &amp; Reisner (2019) found, that education is a protective factor. This may be related to the uniqueness of this survey’s population. Since all respondents are receiving public mental health services, not having serious mental illness then must be associated with some other reason for accessing these services. For example, if a respondent doesn’t have serious mental illness they may be more likely to have traumatic brain injury or intellectual disability, which may be associated with receiving less education, especially because the onset of these conditions may be earlier than for serious mental illness.</p>
+<p>Alcohol &amp; substance disorders: Having an alcohol related disorder seemed to be associated with a higher likelihood (exp(0.37)=1.45 times) of serious mental illness, controlling all other variables, with the coefficient estimate’s 80% credible interval ranging from 0.065 to 0.668. Substance related disorders, on the other hand, had a coefficient estimate that was both positive and negative in the 80% credible interval.</p>
+<p>Hours Worked: The model default was working less than 15 hours per week. Working 15-34 hours per week and 35+ hours per week had coefficients ranging from -1.263 to -0.330 and -2.177 to -1.269 respectively, meaning that working more hours may be associated with lower rates (exp(-0.80)=0.45 times / exp(-1.72)=0.18 times) of serious mental illness, holding other predictors constant. This is intuitive because serious mental illness could make it difficult for a person to work. Oddly, the number of hours worked not applicable (likely meaning the patient is unemployed) coefficient had both positive and negative values in the 80% credible interval, and so is not clearly different from the default.</p>
+<p>Take-away: (when controlling for the other predictors in this model) Patients who identified their race as “other” or “white only”, their age as “child”, have less than a college degree, and work more hours are significantly less likely to have serious mental illness. Patients having an alcohol related disorder are significantly more likely to have serious mental illness.</p>
+<h1 id="conclusion-and-next-steps">Conclusion and Next Steps</h1>
+<p>Overall we found that being a child, identifying race as “white only” or “other”, having less than a college degree, and/or working more hours per week were associated with less chance of having serious mental illness (when controlling for the other predictors in this model). While age and hours worked and education level (as discussed above) may be inherently related to serious mental illness and/or this population, the relevance of race may point to systemic man-made factors that could be changed to promote better mental health for everyone.</p>
+<p>Directions for further analysis of this data set might include using predictors we didn’t (there were 67 variables total!), or exploring other response variables. For example, some patients in the data set were in inpatient, some in outpatient, and others in residential treatments. This could be used as a proxy for mental health severity rather than solely looking at diagnosis as we did.</p>
+<p>Another way to use this data set could be comparing it to the demographic data of New York state as a whole, and seeing which groups are over or under represented in the public mental health system.</p>
+<p>In order to find protective factors against worse mental health outcomes, it would be ideal to have data that included healthy people as well as those needing treatment. For this reason, it is important for anyone collecting data on mental health to include transgender identity, because data sets that do are few and far between.</p>
+<h1 id="bibliography">Bibliography</h1>
+<p>Bailey, L., J. Ellis, S., &amp; McNeil, J. (2014). Suicide risk in the UK trans population and the role of gender transition in decreasing suicidal ideation and suicide attempt. <em>Mental Health Review Journal</em>, 19(4), 209-220. <a href="doi:10.1108/MHRJ-05-2014-0015" class="uri">doi:10.1108/MHRJ-05-2014-0015</a></p>
+<p>Brenick, A., Romano, K., Kegler, C., &amp; Eaton, L. A. (2017). Understanding the influence of stigma and medical mistrust on engagement in routine healthcare among Black women who have sex with women. <em>LGBT Health</em>. <a href="https://doi.org/10.1089/lgbt.2016.0083" class="uri">https://doi.org/10.1089/lgbt.2016.0083</a></p>
+<p>Flores, M., Watson, L., Allen, L., Ford, M., Serpe, C., Choo, P., &amp; Farrell, M. (2018). Transgender people of color’s experiences of sexual objectification: Locating sexual objectification within a matrix of domination. <em>Journal of Counseling Psychology</em>, 65(3), 308-323. <a href="doi:10.1037/cou0000279" class="uri">doi:10.1037/cou0000279</a></p>
+<p>Goldenberg, T., Jadwin-Cakmak, L., Popoff, E., Reisner, S. L., Campbell, B. A., &amp; Harper, G. W. (2019). Stigma, gender affirmation, and primary healthcare use among Black transgender youth. <em>Journal of Adolescent Health</em>. <a href="https://doi.org/10.1016/j.jadohealth.2019.04.029" class="uri">https://doi.org/10.1016/j.jadohealth.2019.04.029</a></p>
+<p>Haas, A., Rodgers, P., &amp; Herman, J. (2014). Suicide attempts among transgender and gender non-conforming adults: Findings of the national transgender discrimination survey. <em>The Williams Institute</em>.</p>
+<p>McDowell, M., Hughto, J., &amp; Reisner, S. (2019). Risk and protective factors for mental health morbidity in a community sample of female-to-male trans-masculine adults. <em>Bmc Psychiatry</em>, 19(1), 16-16. <a href="doi:10.1186/s12888-018-2008-0" class="uri">doi:10.1186/s12888-018-2008-0</a></p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<!--radix_placeholder_article_footer-->
+<!--/radix_placeholder_article_footer-->
+</div>
+
+<div class="d-appendix">
+</div>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+<!--radix_placeholder_site_after_body-->
+<!--/radix_placeholder_site_after_body-->
+<!--radix_placeholder_appendices-->
+<div class="appendix-bottom"></div>
+<!--/radix_placeholder_appendices-->
+<!--radix_placeholder_navigation_after_body-->
+<!--/radix_placeholder_navigation_after_body-->
+
+</body>
+
+</html>

@@ -1,5 +1,7 @@
 ---
 title: "Risk and Protective Factors for Serious Mental Illness among Patients Receiving Public Mental Health Services"
+description: |
+  Bayesian Statistics
 author:
   - name: Yunyang Zhong
 date: 12-14-2021
