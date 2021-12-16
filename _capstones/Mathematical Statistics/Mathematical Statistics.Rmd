@@ -1,5 +1,5 @@
 ---
-title: "Mathematical Statistics"
+title: "Shrinkage Methods"
 description: |
   Mathematical Statistics
 author:
@@ -10,6 +10,4 @@ output:
     self_contained: false
 ---
 
-STAT455 - Mathematical Statistics:
-
-[presentation](https://jacktansnake.github.io/STAT455_LASSO)
+[Slides](https://jacktansnake.github.io/STAT455_LASSO)

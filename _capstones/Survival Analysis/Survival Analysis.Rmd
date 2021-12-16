@@ -1,5 +1,5 @@
 ---
-title: "Survival Analysis"
+title: "How Long after Founding Does a Company Go Public"
 description: |
   Survival Analysis
 author:
@@ -10,6 +10,4 @@ output:
     self_contained: false
 ---
 
-STAT453 - Survival Analysis:
-
-[presentation](https://docs.google.com/presentation/d/1y3EQTmbrHdjBPnQ1R5Q6nfzxWJn6sZmuu9K-MHHYvxI/edit)
+[Slides](https://docs.google.com/presentation/d/1y3EQTmbrHdjBPnQ1R5Q6nfzxWJn6sZmuu9K-MHHYvxI/edit)

@@ -1,5 +1,5 @@
 ---
-title: "Advanced Data Science"
+title: "Prediction of Health Outcomes Based on Various Environmental and Socioeconomic Factors"
 description: |
   Advanced Data Science
 author:
@@ -10,6 +10,720 @@ output:
     self_contained: false
 ---
 
-STAT456 - Advanced Data Science in R:
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
+```
 
-Coming soon...
+```{r}
+library(tidyverse)         # for graphing and data cleaning
+library(tidymodels)        # for modeling
+library(stacks)            # for stacking models
+library(naniar)            # for analyzing missing values
+library(vip)               # for variable importance plots
+library(usemodels)         # for tidymodels suggestions
+library(xgboost)           # for boosting - need to install, don't need to load
+library(doParallel)        # for parallel processing
+library(lubridate)         # for dates
+library(moderndive)        # for King County housing data
+library(patchwork)         # for combining plots nicely
+library(rmarkdown)         # for paged tables
+library(shiny)             # for shiny dashboard
+library(bslib)             # for theming
+library(usmap)             # for maping
+library(Metrics)           # for calculating metric
+theme_set(theme_minimal()) # Lisa's favorite theme
+```
+
+# Introduction
+
+This project builds models to examine the relationship between various environmental and socioeconomic factors and health outcomes in California counties. A large portion of the project involved compiling the data from different publicly available sources, and some decisions on what to include and disclude were made based on the data that could be found. We ultimately chose to focus our analysis on California counties because of an abundance of publicly available data and included the years 2017, 2018, and 2019 because a variety of data had been collected in that time but were uninfluenced by the pandemic.
+
+We built models predicting four different health outcomes - asthma, breast cancer, heart disease, and Alzheimer’s disease - but the dataset we created contains more than twenty other possible health outcomes standardized on a per person basis, making it easy for anyone to create their own. 
+
+## Data Sources
+
+Data for this project was collected from a wide variety of sources, most of which are available through the [California Open Data Portal](http://data.ca.gov/). Below is a list of data sources we used, each of which were standardized by population:
+
+*  Death profiles by county - data on cause for each death in each county - [California Health and Human Services](https://data.chhs.ca.gov/dataset/death-profiles-by-county)
+* Cancer surgery counts by hospital - data was summarized at the county level for counts of surgeries performed for different types of cancers - [California Health and Human Services](https://data.ca.gov/dataset/number-of-cancer-surgeries-volume-performed-in-california-hospitals/resource/43735181-c35f-477e-bf50-9e43348d806a )
+* Asthma emergency department visit rates by county - [California Department of Public Health](https://catalog.data.gov/dataset/asthma-emergency-department-visit-rates)
+* Air quality data by day - data was summarized to the county and annual level - [US EPA](https://www.kaggle.com/epa/epa-historical-air-quality?select=air_quality_annual_summary)
+* California healthy places index - data on a variety of factors including tree canopy, average distance from a park, average distance from a supermarket, median income, and education level by county - [Public Health Alliance of Southern California](https://www.kaggle.com/epa/epa-historical-air-quality?select=air_quality_annual_summary) 
+
+## Data Cleaning and Exploration
+
+Because we combined data from 5 sources with 10+ datasets, our data cleaning process was complex and tedious. Instead of including all of them in this blog, [here](https://github.com/yzhong0620/Advanced-Data-Science-Project) is a link to our GitHub repository, where all datasets and data cleaning files could be found.
+
+Use the interactive graphic below to explore the relationships between the predictors and outcomes in our dataset. If it doesn't load, access it [here](https://miarothberg.shinyapps.io/Final_Project/).
+
+```{r}
+knitr::include_app("https://miarothberg.shinyapps.io/Final_Project/", height = "600px")
+```
+
+## Literature
+
+### Asthma
+
+There is an extensive body of research documenting the relationship between air pollution and asthma, which was the initial inspiration for this project. Increases in concentrations of particulate matter, sulfur dioxide, nitrogen dioxide, and ozone have been documented as directly correlated with increases in asthma-related [emergency room visits](https://www.sciencedirect.com/science/article/abs/pii/S0013935111000296). A general lack of air quality data led us to pursue other possible correlations, especially those provided by the healthy places index dataset.
+
+### Breast Cancer
+
+Recent research has also revealed a positive correlation between those same air pollutants and [breast cancer incidence rates](https://www.nature.com/articles/s41598-020-62200-x). Variables such as education rate, income, and employment are also known to influence breast cancer prevalence, so were included in our model. Breast cancer has also been documented to be genetic, so we did not expect to be able to explain all variation in cancer rates by environmental and socioeconomic factors alone. 
+
+### Alzheimer’s Disease
+
+Long term exposure to air pollutants has been shown to contribute to cognitive decline in a variety of ways, including by increasing [the risk of Alzheimer’s disease and hastening it’s onset](https://www.alz.org/aaic/releases_2021/air-pollution-dementia-risk.asp). Maternal exposure to these pollutants has also been associated with increased risk of autism and ADHD, but we were unable to find data documenting those diagnoses. 
+
+### Heart Disease
+
+Finally, research using an EPA dataset has established that long-term exposure to particulate matter and nitrogen oxides at levels close to the National Ambient Air Quality Standards can prematurely age blood vessels and contribute to a more rapid buildup of calcium in the coronary artery, [leading to heart disease](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736%2816%2900378-0/fulltext).
+
+# Modeling Asthma ER Visits
+
+```{r}
+pollution <- read.csv("data_standardized.csv")
+```
+
+```{r, eval=FALSE}
+pollution %>% 
+  select(where(is.numeric)) %>% 
+  pivot_longer(cols = everything(),
+               names_to = "variable", 
+               values_to = "value") %>% 
+  ggplot(aes(x = value)) +
+  geom_histogram(bins = 30) +
+  facet_wrap(vars(variable), 
+             scales = "free",
+             nrow = 5)
+```
+
+```{r}
+pollution %>% 
+  select(asthma_er_avg) %>% 
+  ggplot(aes(x = asthma_er_avg)) +
+  geom_histogram()
+
+for(i in 1:ncol(pollution)) {
+  median <- median(pollution[,i],na.rm = TRUE)
+  for (j in 1:nrow(pollution)){
+    if (is.na(pollution[j, i])){
+      pollution[j, i] <- median
+    }
+  }
+}
+```
+
+Based on the histogram above, we can see that asthma_er_avg is right_skewed. Also, to get rid of NA values without losing observations, we decided to replace all NAs with the median value of the column.
+
+```{r}
+pollution_mod <- pollution %>%
+  mutate(log_asthma = log(asthma_er_avg, base = 10)) %>% 
+  select(-asthma_er_avg) %>% 
+  mutate(across(where(is.character), as.factor)) %>% 
+  add_n_miss() %>% 
+  filter(n_miss_all == 0) %>% 
+  select(-n_miss_all)
+
+set.seed(456)
+pollution_split <- initial_split(pollution_mod, prop = .75)
+pollution_training <- training(pollution_split)
+pollution_testing <- testing(pollution_split)
+```
+
+To fix to right-skewed shape, we performed a log transformation before using it as the outcome variable in models. We also made sure that all character variables are mutated to factor variables and reassured there were no more NAs.
+
+The dataset has 153 observations of 64 variables in total. 75% (114 observations) were split to be in the training set and 25% (39 observations) were in the testing set.
+
+## Lasso Model
+
+In modeling our data, we decided to look at five different machine learning techniques to determine the best model to predict the health outcomes due to environmental and socioeconomic models.
+
+Lasso model uses both dimension reduction and variable selection in determining the best predictors for the outcomes. We preprocessed the data for the lasso model and removed some variables and normalized the rest of the predictors. 
+
+```{r}
+pollution_recipe <- recipe(log_asthma ~ ., data = pollution_training) %>% 
+  step_rm(County,
+          Year,
+          All.causes..total.,
+          Alzheimer.s.disease,
+          Malignant.neoplasms,
+          Chronic.lower.respiratory.diseases,
+          Diabetes.mellitus,
+          Assault..homicide.,
+          Diseases.of.heart,
+          Essential.hypertension.and.hypertensive.renal.disease,
+          Accidents..unintentional.injuries.,
+          Chronic.liver.disease.and.cirrhosis,
+          Nephritis..nephrotic.syndrome.and.nephrosis,
+          Parkinson.s.disease,
+          Influenza.and.pneumonia,
+          Cerebrovascular.diseases,
+          Intentional.self.harm..suicide.,
+          FIPS,
+          cancer_incidence_rate,
+          asthma_deaths,
+          Bladder_Surgery_Ct,
+          Brain_Surgery_Ct,
+          Breast_Surgery_Ct,
+          Colon_Surgery_Ct,
+          Esophagus_Surgery_Ct,
+          Liver_Surgery_Ct,
+          Lung_Surgery_Ct,
+          Pancreas_Surgery_Ct,
+          Prostate_Surgery_Ct,
+          Rectum_Surgery_Ct,
+          Stomach_Surgery_Ct) %>% 
+  step_normalize(all_predictors(), 
+                 -all_nominal()) %>% 
+  step_dummy(all_nominal(), 
+             -all_outcomes())
+```
+
+Then applied it to our training data. 
+
+```{r}
+pollution_recipe %>% 
+  prep(pollution_training) %>%
+  juice()
+```
+
+To define the model we chose linear regression and other arguments to fit the model.
+
+```{r}
+pollution_lasso_mod <- 
+  linear_reg(mixture = 1) %>% 
+  set_engine("glmnet") %>% 
+  set_args(penalty = tune()) %>% 
+  set_mode("regression")
+```
+
+We then created a workflow with our recipe and defined model. 
+
+```{r}
+pollution_lasso_wf <- 
+  workflow() %>% 
+  add_recipe(pollution_recipe) %>% 
+  add_model(pollution_lasso_mod)
+```
+
+```{r}
+penalty_grid <- grid_regular(penalty(),
+                             levels = 20)
+penalty_grid 
+```
+
+We then tuned the model using a penalty grid and determined our number of resamples. 
+
+```{r}
+ctrl_grid <- control_stack_grid()
+
+set.seed(456)
+pollution_cv <- vfold_cv(pollution_training, v = 5)
+
+pollution_lasso_tune <- 
+  pollution_lasso_wf %>% 
+  tune_grid(
+    resamples = pollution_cv,
+    grid = penalty_grid,
+    control = ctrl_grid
+    )
+
+pollution_lasso_tune
+```
+
+Looked at the RMSE of the model output to determine the best model to use on the testing data. 
+
+```{r}
+pollution_lasso_tune %>% 
+  select(id, .metrics) %>% 
+  unnest(.metrics) %>% 
+  filter(.metric == "rmse")
+```
+
+We then visualized the RMSE as a function of the penalty value.
+
+```{r}
+pollution_lasso_tune %>% 
+  collect_metrics() %>% 
+  filter(.metric == "rmse") %>% 
+  ggplot(aes(x = penalty, y = mean)) +
+  geom_point() +
+  geom_line() +
+  scale_x_log10(
+   breaks = scales::trans_breaks("log10", function(x) 10^x),
+   labels = scales::trans_format("log10",scales::math_format(10^.x))) +
+  labs(x = "penalty", y = "rmse")
+```
+
+We used the show_best() and select_best() functions to select the best model.
+
+```{r}
+pollution_lasso_tune %>% 
+  show_best(metric = "rmse")
+```
+
+```{r}
+best_param <- pollution_lasso_tune %>% 
+  select_best(metric = "rmse")
+best_param
+```
+
+
+```{r}
+one_se_param <- pollution_lasso_tune %>% 
+  select_by_one_std_err(metric = "rmse", desc(penalty))
+one_se_param
+```
+
+We then finalized the workflow using the selected lasso model. 
+
+```{r}
+pollution_lasso_final_wf <- pollution_lasso_wf %>% 
+  finalize_workflow(one_se_param)
+pollution_lasso_final_wf
+```
+
+Using this finalized workflow, we fit the data to the training data and visualized the estimate values.
+
+```{r}
+pollution_lasso_final_mod <- pollution_lasso_final_wf %>% 
+  fit(data = pollution_training)
+
+pollution_lasso_final_mod %>% 
+  pull_workflow_fit() %>% 
+  tidy() 
+```
+
+We then looked at the evaluation metrics across all folds.  
+
+```{r}
+pollution_lasso_test <- pollution_lasso_final_wf %>% 
+  last_fit(pollution_split)
+
+# Metrics for model applied to test data
+pollution_lasso_test %>% 
+  collect_metrics()
+```
+
+## Xgboost model
+
+First we used the use_xgboost() function, which gives recommendation on how to build our recipe, workflow, etc.
+
+```{r}
+use_xgboost(log_asthma ~ ., data = pollution_training)
+```
+
+Based on output from the use_xgboost() function and our previous recipes, we created our own recipe.
+
+```{r}
+boost_recipe <- 
+  recipe(formula = log_asthma ~ ., data = pollution_training) %>% 
+  step_rm(County,
+          Year,
+          All.causes..total.,
+          Alzheimer.s.disease,
+          Malignant.neoplasms,
+          Chronic.lower.respiratory.diseases,
+          Diabetes.mellitus,
+          Assault..homicide.,
+          Diseases.of.heart,
+          Essential.hypertension.and.hypertensive.renal.disease,
+          Accidents..unintentional.injuries.,
+          Chronic.liver.disease.and.cirrhosis,
+          Nephritis..nephrotic.syndrome.and.nephrosis,
+          Parkinson.s.disease,
+          Influenza.and.pneumonia,
+          Cerebrovascular.diseases,
+          Intentional.self.harm..suicide.,
+          FIPS,
+          cancer_incidence_rate,
+          asthma_deaths,
+          Bladder_Surgery_Ct,
+          Brain_Surgery_Ct,
+          Breast_Surgery_Ct,
+          Colon_Surgery_Ct,
+          Esophagus_Surgery_Ct,
+          Liver_Surgery_Ct,
+          Lung_Surgery_Ct,
+          Pancreas_Surgery_Ct,
+          Prostate_Surgery_Ct,
+          Rectum_Surgery_Ct,
+          Stomach_Surgery_Ct) %>% 
+  step_novel(all_nominal_predictors()) %>% 
+  step_dummy(all_nominal_predictors(), one_hot = TRUE)  %>% 
+  step_zv(all_predictors()) %>% 
+  step_normalize(all_predictors(), 
+                 -all_nominal())
+```
+
+Next, we specified the model. learn_rate is the parameter we decided to tune, and we created a grid of 10 values to try in tuning for learn_rate as the following:
+
+```{r}
+boost_spec <- boost_tree(
+  trees = 1000,            # number of trees, T in the equations above
+  tree_depth = 2,          # max number of splits in the tree
+  min_n = 5,               # min points required for node to be further split
+  loss_reduction = 10^-5,  # when to stop - smaller = more since it only has to get a little bit better 
+  sample_size = 1,         # proportion of training data to use
+  learn_rate = tune(),     # lambda from the equations above
+  stop_iter = 50           # number of iterations w/o improvement b4 stopping
+) %>% 
+  set_engine("xgboost", colsample_bytree = 1) %>% 
+  set_mode("regression")
+```
+
+```{r}
+boost_grid <- grid_regular(learn_rate(),
+                           levels = 10)
+boost_grid
+```
+
+We then put the recipe and model specification into a workflow.
+
+```{r}
+boost_wf <- workflow() %>% 
+  add_recipe(boost_recipe) %>%
+  add_model(boost_spec) 
+```
+
+The next step is to train these models. registerDoParallel() was used to speed up the process.
+
+```{r}
+set.seed(456)
+registerDoParallel()
+
+boost_tune <- boost_wf %>% 
+  tune_grid(
+  # resamples = val_split,
+  resamples = pollution_cv,
+  grid = boost_grid,
+  control = ctrl_grid
+)
+```
+
+Here is a table summarizing the results. We can see that larger learning rates actually seem to do better.
+
+```{r}
+collect_metrics(boost_tune)
+```
+
+We also plotted the rmse to visually support our conclusion above.
+
+```{r}
+collect_metrics(boost_tune) %>% 
+  filter(.metric == "rmse") %>% 
+  ggplot(aes(x = learn_rate, y = mean)) +
+  geom_point() +
+  geom_line() +
+  scale_x_log10() +
+  labs(y = "rmse") +
+  theme_minimal()
+```
+
+Then we decided to select the best learning rate parameter and finalize the model.
+
+```{r}
+best_lr <- select_best(boost_tune, "rmse")
+best_lr
+```
+
+```{r}
+# finalize workflow
+final_boost_wf <- finalize_workflow(
+  boost_wf,
+  best_lr
+)
+
+# fit final
+final_boost <- final_boost_wf %>% 
+  fit(data = pollution_training)
+```
+
+This graph tells us which predictors are the most important. It seems that supermarkets, annual_mean_no2, and homeownership have the largest influence on asthma ER visit.
+
+```{r}
+final_boost %>% 
+  pull_workflow_fit() %>%
+  vip(geom = "col")
+```
+
+The final model was also fitted to the testing data. We can see the testing rmse is 0.05, larger than the training rmse.
+
+```{r}
+# Use model on test data
+test_preds <- pollution_testing %>% 
+  bind_cols(predict(final_boost, new_data = pollution_testing)) 
+
+# Compute test rmse
+test_preds %>% 
+  summarize(rmse = sqrt(mean((log_asthma - .pred)^2))) %>% 
+  pull(rmse)
+```
+
+The graph below visualized the results. We can conclude that the predicted values are very close to the actual values.
+
+```{r}
+# Graph results
+test_preds %>% 
+  ggplot(aes(x = log_asthma,
+             y = .pred)) +
+  geom_point(alpha = .5, 
+             size = .5) +
+  geom_smooth(se = FALSE) +
+  geom_abline(slope = 1, 
+              intercept = 0, 
+              color = "darkred") +
+  labs(x = "Actual log(asthma)", 
+       y = "Predicted log(asthma)")
+```
+
+## Random Forest Model
+
+We set up the random forest model with its recipe and preprocessing steps.
+
+```{r}
+pollution_rfrecipe <- recipe(log_asthma ~ ., data = pollution_training) %>% 
+  step_rm(County,
+          Year,
+          All.causes..total.,
+          Alzheimer.s.disease,
+          Malignant.neoplasms,
+          Chronic.lower.respiratory.diseases,
+          Diabetes.mellitus,
+          Assault..homicide.,
+          Diseases.of.heart,
+          Essential.hypertension.and.hypertensive.renal.disease,
+          Accidents..unintentional.injuries.,
+          Chronic.liver.disease.and.cirrhosis,
+          Nephritis..nephrotic.syndrome.and.nephrosis,
+          Parkinson.s.disease,
+          Influenza.and.pneumonia,
+          Cerebrovascular.diseases,
+          Intentional.self.harm..suicide.,
+          FIPS,
+          cancer_incidence_rate,
+          asthma_deaths,
+          Bladder_Surgery_Ct,
+          Brain_Surgery_Ct,
+          Breast_Surgery_Ct,
+          Colon_Surgery_Ct,
+          Esophagus_Surgery_Ct,
+          Liver_Surgery_Ct,
+          Lung_Surgery_Ct,
+          Pancreas_Surgery_Ct,
+          Prostate_Surgery_Ct,
+          Rectum_Surgery_Ct,
+          Stomach_Surgery_Ct) %>% 
+  step_normalize(all_predictors(), 
+                 -all_nominal()) %>% 
+  step_dummy(all_nominal(), 
+             -all_outcomes())
+```
+
+Applied the recipe to the training data. 
+
+```{r}
+pollution_rfrecipe %>% 
+  prep(pollution_training) %>%
+  juice()
+```
+
+Create the model using regressions and ranger as the engine. 
+```{r}
+ranger_pollution <- 
+  rand_forest(mtry = tune(), 
+              min_n = tune(), 
+              trees = 200) %>% 
+  set_mode("regression") %>% 
+  set_engine("ranger")
+```
+
+Set up workflow with the recipe and random forest model made above. 
+```{r}
+pollution_rfworkflow <- 
+  workflow() %>% 
+  add_recipe(pollution_rfrecipe) %>% 
+  add_model(ranger_pollution) 
+```
+
+Set up penalty grid model.
+
+```{r}
+rf_penalty_grid <- grid_regular(finalize(mtry(),
+                                         pollution_training %>%
+                                           select(-log_asthma)),
+                                min_n(),
+                                levels = 3)
+```
+
+Tuned the model and determine the best RMSE. 
+
+```{r}
+set.seed(456) 
+
+pollution_cv <- vfold_cv(pollution_training, v = 5) 
+
+pollution_rfTUNE <- 
+  pollution_rfworkflow %>% 
+  tune_grid(
+    resamples = pollution_cv,
+    grid = rf_penalty_grid,
+    control = ctrl_grid
+  )
+
+best_rmse <- 
+  pollution_rfTUNE %>%
+  select_best(metric = "rmse")
+
+best_rmse
+```
+
+Fitting model to testing data.
+
+```{r}
+pol_rfFinal <- pollution_rfworkflow %>%
+  finalize_workflow(best_rmse) %>%
+  fit(data = pollution_training)
+```
+
+Finding the RMSE of the testing data. 
+
+
+```{r}
+predictions_rf <- pollution_testing %>% 
+  select(log_asthma) %>% 
+  bind_cols(predict(pol_rfFinal, new_data = pollution_testing))
+
+predictions_rf %>%
+  summarize(training_rmse = sqrt(mean((log_asthma - .pred)^2)))
+```
+
+```{r}
+predictions_rf %>% 
+  ggplot(aes(x = log_asthma,
+             y = .pred)) +
+  geom_point(alpha = .5, 
+             size = .5) +
+  geom_smooth(se = FALSE) +
+  geom_abline(slope = 1, 
+              intercept = 0, 
+              color = "darkred") +
+  labs(x = "Actual log(asthma)", 
+       y = "Predicted log(asthma)")
+```
+
+
+## Stacking
+
+After we had our set of candidate models (9 random forest, 20 lasso, and 10 boost), we started stacking. We followed the process laid out on the stacks webpage.
+
+First, we created the stack. Shown by the number of columns, it removed some of the lasso models, likely since they were too similar to other lasso models. The set of candidate models now has 9 random forest, 9 lasso, and 9 boost.
+
+```{r}
+pollution_stack <- 
+  stacks() %>% 
+  add_candidates(boost_tune) %>%
+  add_candidates(pollution_lasso_tune) %>% 
+  add_candidates(pollution_rfTUNE)
+```
+
+We can look at the predictions from the candidate models in a tibble. Most of the predictions are very close to the actual values, except the first few boost models.
+
+```{r}
+as_tibble(pollution_stack)
+```
+
+We wanted to blend the predictions from each model together to form an even better overall prediction using the blend_predictions() function. Doing this with our models, we see only 4 models have non-zero coefficients, 1 random forest, 2 lasso, and 1 boost:
+
+```{r}
+set.seed(456)
+
+pollution_blend <- 
+  pollution_stack %>% 
+  blend_predictions()
+
+pollution_blend
+```
+
+Here is the rmse for the various penalty parameters:
+
+```{r}
+pollution_blend$metrics %>% 
+  filter(.metric == "rmse")
+```
+
+We can examine some plots to see if we need to adjust the penalty parameter at all. This set of three plots with penalty on the x axis shows that we seem to have captured the smallest RMSE.
+
+```{r}
+autoplot(pollution_blend)
+```
+
+The blending weights for the top ensemble members are presented in this plot. The random forest has the highest weight, more than two times of the second highest weight boost has. The two lasso models have low weights.
+
+```{r}
+autoplot(pollution_blend, type = "weights")
+```
+
+Finally we fit the candidate models with non-zero stacking coefficients to the full training data using fit_members() function. The numeric values of the blending weights for the top ensemble members are also printed out.
+
+```{r}
+pollution_final_stack <- pollution_blend %>% 
+  fit_members()
+
+pollution_final_stack
+```
+
+Here is a plot comparing predicted and actual values after fitting it to the testing data. We can see the two lines are almost the same!
+
+```{r}
+pollution_final_stack %>% 
+  predict(new_data = pollution_testing) %>% 
+  bind_cols(pollution_testing) %>% 
+  ggplot(aes(x = log_asthma, 
+             y = .pred)) +
+  geom_point(alpha = .5, 
+             size = .5) +
+  geom_smooth(se = FALSE) +
+  geom_abline(slope = 1, 
+              intercept = 0, 
+              color = "darkred") +
+  labs(x = "Actual log(asthma)", 
+       y = "Predicted log(asthma)")
+```
+
+```{r}
+data_rmse <- pollution_final_stack %>% 
+  predict(new_data = pollution_testing) %>% 
+  bind_cols(pollution_testing) 
+
+rmse(data_rmse$log_asthma, data_rmse$.pred)
+```
+
+The final plot, which shows the blue line of the predicted values nearly match the red line of the ideal values, and the low RMSE show that this model was fairly effective.
+
+## Modeling Other Variables
+
+We created models in the same way for three other variables, which you can read about in the links below:
+
+* Alzheimer's disease death rate - [here](https://alzheimers-models.netlify.app/)
+* Breast cancer surgery rate - [here](https://breast-cancer-models.netlify.app/)
+* Heart disease death rate - [here](https://heart-disease-models.netlify.app/)
+
+Overall, the Alzheimer's disease death rate model was most effective at predicting the outcome variable and the breast cancer surgery rate model was the least effective. This suggests that many of the factors that worsen Alzheimer's disease were present in our dataset but that it was missing factors that contribute to breast cancer. This makes sense, as breast cancer has been shown to be hereditary.
+
+# Limitations, Troubleshooting, and Potential Repercussions
+
+One major limitation with this project was the lack of data available. While we initially knew we wanted to focus on the relationship between air pollutants and various health outcomes, we chose to focus solely on California because that was the data that was available. We could only find limited data on air pollutants, so expanded our dataset to include data that we could find on socioeconomic variables. Additionally, many of the air pollutants had missing values, and we found that our dataset only had 13 complete cases that our models were being based on. To deal with this, we filled in all the NA values with the median value for each variable. This likely weakens the models, though they were still fairly strong.
+
+If we only look at the visualizations displayed in the Shiny app, it is possible to come to conclusions that in reality do not make sense. For example, there seems to be a negative relationship between asthma ER visits and mean annual particulate matter 2.5, despite an extensive body of research and logic that indicate an opposite relationship. That is to say, because we have limited data from a certain area and many other factors play important roles affecting asthma, we should limit conclusions from examining the plots alone.
+It is also important to keep in mind that these models are not predicting health outcomes for any given individual; they are predicting the per person rate of the health outcome in each county. The models should not be used to determine insurance rates, but they could be used as the basis for policies that, for example, lower air pollutant limits or advocate for more accessible education. 
+
+It is also important to keep in mind that these models are not predicting health outcomes for any given individual; they are predicting the per person rate of the health outcome in each county. The models should not be used to determine insurance rates, but they could be used as the basis for policies that, for example, lower air pollutant limits or advocate for more accessible education.
+
+# Outcomes/Future Directions
+
+The models created in this project were able to predict the chosen outcome variables with a fair amount of accuracy. A next step would be to focus on more interpretable machine learning, specifically creating an interactive ceteris paribus profile to easily visualize the exact impacts of each variable on the predictor.
+
+The dataset we created contains numerous other health outcomes, each of which could be the subject of its own model with relatively little additional work. We chose to model the outcomes that we did because of previous research tying them to environmental factors, but it would be interesting to look for connections for the other variables as well.
+
+Additionally, it would be useful to add more predictors to the dataset, especially those focused on the race and age distributions of each county. Those are currently missing from the dataset we built but are known risk factors for many health outcomes, so adding them may help to reveal any potentially confounding variables. 
