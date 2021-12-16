@@ -1,0 +1,13 @@
+---
+title: "Causal Inference"
+author:
+  - name: Yunyang Zhong
+date: 12-14-2021
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+STAT451 - Causal Inference:
+
+[presentation](https://docs.google.com/presentation/d/1MAMqiuQNz8moN81Cf-GnFAp0z4kRL1DZ5HBzAYZK8O4/edit)

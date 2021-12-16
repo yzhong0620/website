@@ -1,0 +1,13 @@
+---
+title: "Survival Analysis"
+author:
+  - name: Yunyang Zhong
+date: 12-14-2021
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+STAT453 - Survival Analysis:
+
+[presentation](https://docs.google.com/presentation/d/1y3EQTmbrHdjBPnQ1R5Q6nfzxWJn6sZmuu9K-MHHYvxI/edit)
