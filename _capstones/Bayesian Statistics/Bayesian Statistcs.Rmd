@@ -10,6 +10,8 @@ output:
     self_contained: false
 ---
 
+[Slides](https://docs.google.com/presentation/d/1hvE4jDLa8doPflGUcGVa6oRPS0FislTGw2-9DQcHFRo/edit#slide=id.p)
+
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(warning = FALSE, message = FALSE)
 ```
