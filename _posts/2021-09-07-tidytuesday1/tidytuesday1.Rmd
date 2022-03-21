@@ -33,7 +33,7 @@ theme_set(theme_minimal())
 results <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2021/2021-09-07/results.csv')
 ```
 
-```{r, echo=FALSE, message=FALSE}
+```{r, message=FALSE}
 tidy <- results %>% 
   filter(fastestLapSpeed!='\\N') %>% 
   filter(raceId<=50) %>% 
