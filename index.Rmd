@@ -106,6 +106,36 @@ October 2020-November 2020
 * Divided the work into parts and distributed to members with clear and detailed directions based on interest and strength
 * Analyzed given dataset with more than 20000 rows and more than 2000 columns and used the model to predict categories of potential medicines through CNN and TabNet models
 
+## Academic Projects
+
+**Prediction of Disease Rate Based on Pollutant Information**
+
+September 2021- December 2021
+
+* Cleaned and combined datasets from 5 sources, and built a stacked model containing LASSO, Forest, and Classification Tree in R
+* Interpreted models using global and local interpretation tools such as CP Profile, LIME, and SHAP
+
+**A Bayesian Analysis of Serious Mental Illness and Trans Identity**
+
+September 2021- December 2021
+
+* Cleaned a dataset with 175k+ observations in R
+* Created Bayesian models using MCMC, Naive Bayes classification, and hierarchical approach
+
+**How Long after Founding Does a Company Go Public**
+
+January 2021 - March 2021
+
+* Used exploratory analysis to understand the data and determine which models to consider
+* Performed parametric and nonparametric survival modeling on time and hazard in R
+
+**Causal Effect between Sleeping Time and Life Satisfaction**
+
+September 2020 - October 2020
+
+* Constructed a causal diagram on different factors related to sleeping time and life satisfaction to discover the control set
+* Conducted a regression model and an inverse probability weighting model with sensitivity analysis in R to study the causal effect
+
 ## Extra-curriculum Activities
 
 **Macalester African Music Ensemble**, Saint Paul, MN
