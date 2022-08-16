@@ -4,7 +4,7 @@ description: |
   Causal Inference
 author:
   - name: Yunyang Zhong
-date: 12-14-2021
+date: 10-23-2020
 output:
   distill::distill_article:
     self_contained: false
