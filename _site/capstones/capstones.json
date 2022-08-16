@@ -1,5 +1,22 @@
 [
   {
+    "path": "capstones/Correlated Data/",
+    "title": "Investigation on COVID Vaccine Hesitancy",
+    "description": "Correlated Data",
+    "author": [
+      {
+        "name": "Yunyang Zhong",
+        "url": {}
+      }
+    ],
+    "date": "2022-08-14",
+    "categories": [],
+    "contents": "\r\nSlides\r\n\r\n\r\n\r\n",
+    "preview": {},
+    "last_modified": "2022-08-16T11:14:55-04:00",
+    "input_file": "Correlated-Data.knit.md"
+  },
+  {
     "path": "capstones/Advanced Data Science/",
     "title": "Prediction of Health Outcomes Based on Various Environmental and Socioeconomic Factors",
     "description": "Advanced Data Science",

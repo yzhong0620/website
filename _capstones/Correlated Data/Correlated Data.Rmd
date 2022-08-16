@@ -1,0 +1,13 @@
+---
+title: "Investigation on COVID Vaccine Hesitancy"
+description: |
+  Correlated Data
+author:
+  - name: Yunyang Zhong
+date: 8-14-2022
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+[Slides](https://docs.google.com/presentation/d/1kg7iM_8nQP1RC_zGHHTCIzO9xvPKBCGYule4b4A_pPc/edit#slide=id.p)
