@@ -14,7 +14,7 @@
     "contents": "\r\nSlides\r\n\r\n\r\n\r\n",
     "preview": {},
     "last_modified": "2022-08-16T11:18:37-04:00",
-    "input_file": "Correlated-Data.knit.md"
+    "input_file": {}
   },
   {
     "path": "capstones/Advanced Data Science/",
@@ -65,7 +65,7 @@
     "contents": "\r\nSlides\r\n\r\n\r\n\r\n",
     "preview": {},
     "last_modified": "2022-08-16T11:20:22-04:00",
-    "input_file": "Survival-Analysis.knit.md"
+    "input_file": {}
   },
   {
     "path": "capstones/Causal Inference/",
@@ -81,8 +81,8 @@
     "categories": [],
     "contents": "\r\nSlides\r\n\r\n\r\n\r\n",
     "preview": {},
-    "last_modified": "2022-08-16T11:20:04-04:00",
-    "input_file": "Causal-Inference.knit.md"
+    "last_modified": "2022-08-16T11:20:05-04:00",
+    "input_file": {}
   },
   {
     "path": "capstones/Mathematical Statistics/",
@@ -98,7 +98,7 @@
     "categories": [],
     "contents": "\r\nSlides\r\n\r\n\r\n\r\n",
     "preview": {},
-    "last_modified": "2022-08-16T11:22:11-04:00",
-    "input_file": "Mathematical-Statistics.knit.md"
+    "last_modified": "2022-08-16T11:22:12-04:00",
+    "input_file": {}
   }
 ]

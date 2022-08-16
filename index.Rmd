@@ -46,7 +46,7 @@ Statistics, Bayesian Statistics, Survival Analysis, Correlated Data, Causal Infe
 
 **YourPath**, Saint Paul, MN
 
-September 2021-May 2022
+September 2021 - May 2022
 
 *Statistics Intern*
 
@@ -57,7 +57,7 @@ September 2021-May 2022
 
 **reThought Insurance**, Saint Paul, MN 
 
-June 2021-August 2021
+June 2021 - August 2021
 
 *Data Science Intern*
 
@@ -70,7 +70,7 @@ June 2021-August 2021
 
 **Macalester College MSCS Department**, Saint Paul, MN
 
-September 2020-May 2022
+September 2020 - May 2022
 
 *Teaching Assistant for Computational Biology, Probability, Database Management, and Statistical Machine Learning*
 
@@ -98,7 +98,7 @@ January 2021
 
 **Kaggle Research Code Competition**, Saint Paul, MN
 
-October 2020-November 2020
+October 2020 - November 2020
 
 *Team Leader*
 
@@ -108,16 +108,23 @@ October 2020-November 2020
 
 ## Academic Projects
 
+**Investigation on COVID Vaccine Hesitancy**
+
+January 2022 - May 2022
+
+*	Used LASSO and data visualization to select critical variables from the original 150+ ones and categorized them based on distribution to perform logistic regressions
+*	Examined outputs from GEE models and mixed effect models (correlation and interaction considered) using different working correlation structure, hypothesis testing, confusion matrix and provided estimated odds ratios and significance metrics
+
 **Prediction of Disease Rate Based on Pollutant Information**
 
-September 2021- December 2021
+September 2021 - December 2021
 
 * Cleaned and combined datasets from 5 sources, and built a stacked model containing LASSO, Forest, and Classification Tree in R
 * Interpreted models using global and local interpretation tools such as CP Profile, LIME, and SHAP
 
 **A Bayesian Analysis of Serious Mental Illness and Trans Identity**
 
-September 2021- December 2021
+September 2021 - December 2021
 
 * Cleaned a dataset with 175k+ observations in R
 * Created Bayesian models using MCMC, Naive Bayes classification, and hierarchical approach
@@ -140,7 +147,7 @@ September 2020 - October 2020
 
 **Macalester African Music Ensemble**, Saint Paul, MN
 
-January 2020-May 2022
+January 2020 - May 2022
 
 *Co-manager*
 
@@ -150,7 +157,7 @@ January 2020-May 2022
 
 **Jie Ming Mandarin Immersion Academy**, Saint Paul, MN
 
-September 2018-May 2019
+September 2018 - May 2019
 
 *Volunteer*
 
