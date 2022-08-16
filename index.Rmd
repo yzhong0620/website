@@ -13,38 +13,47 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ```
 
-<center>
+</center>
 
-![](yunyangzhong.jpg){height=25%, width=25%}
+![](Yunyang.jpg){height=200%, width=40%}
 
 </center>
 
 ## About me:
 
-Yunyang Zhong [You-in-young Jong]
+Yunyang Zhong [YOU-in-YOUNG Jong]
 
 ## Education:
 
+**Harvard Chan School of Public Health**, Boston, MA
+
+M.S. in Biostatistics Expected Dec 2024
+
 **Macalester College**, Saint Paul, MN
 
-B.A. Expected May 2022
+B.A. May 2022
 
 Major: Applied Math and Statistics
 
 Minors: Computer Science, Psychology
 
+Honors: Kaplan Endowed Prize in Data Science, summa cum laude, Dean’s List
+
+Coursework: Database Mngmt, Statistical Machine Learning, Advance Data Science in R, Mathematical
+Statistics, Bayesian Statistics, Survival Analysis, Correlated Data, Causal Inference, Probability
+
 ## Professional Experience
 
 **YourPath**, Saint Paul, MN
 
-September 2021-Present
+September 2021-May 2022
 
 *Statistics Intern*
 
-* Review literature to examine the body of evidence for various behavioral health and social determinants of health screenings and brief assessments
-* Contribute to strategic planning around alignment of data tools (Python, R, SQL) with the existing YourPath technology platforms and previously-developed custom software efforts
-* Utilize R to make 50+ clear and concise visualizations and provide insights of data
-* Recommend solutions to improve data collection process by assuring data quality
+* Reviewed literature to examine the body of evidence for various behavioral health and social determinants of health screenings and brief assessments
+* Contributed to strategic planning around alignment of data tools (Python, R, SQL) with the existing YourPath technology platforms and previously-developed custom software efforts
+* Utilized R to make 50+ clear and concise visualizations and provide insights of data
+* Recommended solutions to improve data collection process by assuring data quality
 
 **reThought Insurance**, Saint Paul, MN 
 
@@ -61,13 +70,13 @@ June 2021-August 2021
 
 **Macalester College MSCS Department**, Saint Paul, MN
 
-September 2020-Present
+September 2020-May 2022
 
-*Teaching Assistant for Computational Biology, Probability, and Statistical Machine Learning*
+*Teaching Assistant for Computational Biology, Probability, Database Management, and Statistical Machine Learning*
 
-* Work with students to review their code, identify errors, and suggest better methods for effectiveness to lay the foundation for further study
-* Communicate feedback with professors regarding student learning and grading strategies to enhance learning and teaching experience
-* Assess and grade weekly assignments for approximately 40 students to provide feedback to students
+* Worked with students to review their code, identify errors, and suggest better methods for effectiveness to lay the foundation for further study
+* Communicated feedback with professors regarding student learning and grading strategies to enhance learning and teaching experience
+* Assessed and graded weekly assignments for approximately 40 students to provide feedback to students
 
 **Macalester College**, Saint Paul, MN
 
@@ -101,13 +110,13 @@ October 2020-November 2020
 
 **Macalester African Music Ensemble**, Saint Paul, MN
 
-January 2020-Present
+January 2020-May 2022
 
 *Co-manager*
 
-* Act as a primary liaison communicating schedule and instructor requirements to members to make sure healthy and efficient interaction
-* Manage ensemble fund by analyzing spending to ensure it remains on budget and for better usage
-* Brainstorm ideas for ensemble recruitment and activities for community building
+* Acted as a primary liaison communicating schedule and instructor requirements to members to make sure healthy and efficient interaction
+* Managed ensemble fund by analyzing spending to ensure it remains on budget and for better usage
+* Brainstormed ideas for ensemble recruitment and activities for community building
 
 **Jie Ming Mandarin Immersion Academy**, Saint Paul, MN
 

@@ -50,16 +50,17 @@ pre.numberSource code > span > a:first-child::before
   }
 pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
-  {   }
+  { color: #00769e; background-color: #f1f3f5; }
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
+code span { color: #00769e; } /* Normal */
 code span.al { color: #ad0000; } /* Alert */
 code span.an { color: #5e5e5e; } /* Annotation */
-code span.at { } /* Attribute */
+code span.at { color: #657422; } /* Attribute */
 code span.bn { color: #ad0000; } /* BaseN */
 code span.bu { } /* BuiltIn */
-code span.cf { color: #007ba5; } /* ControlFlow */
+code span.cf { color: #00769e; } /* ControlFlow */
 code span.ch { color: #20794d; } /* Char */
 code span.cn { color: #8f5902; } /* Constant */
 code span.co { color: #5e5e5e; } /* Comment */
@@ -73,9 +74,9 @@ code span.fl { color: #ad0000; } /* Float */
 code span.fu { color: #4758ab; } /* Function */
 code span.im { } /* Import */
 code span.in { color: #5e5e5e; } /* Information */
-code span.kw { color: #007ba5; } /* Keyword */
+code span.kw { color: #00769e; } /* Keyword */
 code span.op { color: #5e5e5e; } /* Operator */
-code span.ot { color: #007ba5; } /* Other */
+code span.ot { color: #00769e; } /* Other */
 code span.pp { color: #ad0000; } /* Preprocessor */
 code span.sc { color: #5e5e5e; } /* SpecialChar */
 code span.ss { color: #20794d; } /* SpecialString */
@@ -1030,10 +1031,6 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     margin-top: 1.5em;
   }
 
-  .figure img {
-    width: 100%;
-  }
-
   .figure .caption {
     color: rgba(0, 0, 0, 0.6);
     font-size: 12px;
@@ -1863,6 +1860,12 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
       // hoverable references
       $('span.citation[data-cites]').each(function() {
+        if ($(this).children()[0].nodeName == "D-FOOTNOTE") {
+          var fn = $(this).children()[0]
+          $(this).html(fn.shadowRoot.querySelector("sup"))
+          $(this).id = fn.id
+          fn.remove()
+        }
         var refs = $(this).attr('data-cites').split(" ");
         var refHtml = refs.map(function(ref) {
           return "<p>" + $('#ref-' + ref).html() + "</p>";
@@ -1877,6 +1880,31 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
           placement: 'bottom-start'
         });
       });
+
+      // fix footnotes in tables (#411)
+      // replacing broken distill.pub feature
+      $('table d-footnote').each(function() {
+        // we replace internal showAtNode methode which is triggered when hovering a footnote
+        this.hoverBox.showAtNode = function(node) {
+          // ported from https://github.com/distillpub/template/pull/105/files
+          calcOffset = function(elem) {
+              let x = elem.offsetLeft;
+              let y = elem.offsetTop;
+              // Traverse upwards until an `absolute` element is found or `elem`
+              // becomes null.
+              while (elem = elem.offsetParent && elem.style.position != 'absolute') {
+                  x += elem.offsetLeft;
+                  y += elem.offsetTop;
+              }
+
+              return { left: x, top: y };
+          }
+          // https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetTop
+          const bbox = node.getBoundingClientRect();
+          const offset = calcOffset(node);
+          this.show([offset.left + bbox.width, offset.top + bbox.height]);
+        }
+      })
 
       // clear polling timer
       clearInterval(tid);
@@ -1976,6 +2004,8 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     // mark non-body figures created by knitr chunks as 100% width
     $('.layout-chunk').each(function(i, val) {
       var figures = $(this).find('img, .html-widget');
+      // ignore leaflet img layers (#106)
+      figures = figures.filter(':not(img[class*="leaflet"])')
       if ($(this).attr('data-layout') !== "l-body") {
         figures.css('width', '100%');
       } else {
@@ -1998,7 +2028,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     // get rid of index.html references in header
     if (window.location.protocol !== "file:") {
       $('.distill-site-header a[href]').each(function(i,val) {
-        $(this).attr('href', $(this).attr('href').replace("index.html", "./"));
+        $(this).attr('href', $(this).attr('href').replace(/^index[.]html/, "./"));
       });
     }
 
@@ -2347,7 +2377,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     color: var(--hover-color, white);
   }</style>
   <!--/radix_placeholder_distill-->
-  <script src="site_libs/header-attrs-2.13/header-attrs.js"></script>
+  <script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
   <script src="site_libs/popper-2.6.0/popper.min.js"></script>
   <link href="site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
   <link href="site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
@@ -2406,86 +2436,129 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 
 <div class="d-article">
-<center>
-<p><img src="yunyangzhong.jpg" style="width:25.0%" /></p>
+</center>
+<p><img src="Yunyang.jpg" style="width:40.0%" /></p>
 </center>
 <h2 id="about-me">About me:</h2>
-<p>Yunyang Zhong [You-in-young Jong]</p>
+<p>Yunyang Zhong [YOU-in-YOUNG Jong]</p>
 <h2 id="education">Education:</h2>
+<p><strong>Harvard Chan School of Public Health</strong>, Boston, MA</p>
+<p>M.S. in Biostatistics Expected Dec 2024</p>
 <p><strong>Macalester College</strong>, Saint Paul, MN</p>
-<p>B.A. Expected May 2022</p>
+<p>B.A. May 2022</p>
 <p>Major: Applied Math and Statistics</p>
 <p>Minors: Computer Science, Psychology</p>
+<p>Honors: Kaplan Endowed Prize in Data Science, summa cum laude, Dean’s
+List</p>
+<p>Coursework: Database Mngmt, Statistical Machine Learning, Advance
+Data Science in R, Mathematical Statistics, Bayesian Statistics,
+Survival Analysis, Correlated Data, Causal Inference, Probability</p>
 <h2 id="professional-experience">Professional Experience</h2>
 <p><strong>YourPath</strong>, Saint Paul, MN</p>
-<p>September 2021-Present</p>
+<p>September 2021-May 2022</p>
 <p><em>Statistics Intern</em></p>
 <ul>
-<li>Review literature to examine the body of evidence for various behavioral health and social determinants of health screenings and brief assessments</li>
-<li>Contribute to strategic planning around alignment of data tools (Python, R, SQL) with the existing YourPath technology platforms and previously-developed custom software efforts</li>
-<li>Utilize R to make 50+ clear and concise visualizations and provide insights of data</li>
-<li>Recommend solutions to improve data collection process by assuring data quality</li>
+<li>Reviewed literature to examine the body of evidence for various
+behavioral health and social determinants of health screenings and brief
+assessments</li>
+<li>Contributed to strategic planning around alignment of data tools
+(Python, R, SQL) with the existing YourPath technology platforms and
+previously-developed custom software efforts</li>
+<li>Utilized R to make 50+ clear and concise visualizations and provide
+insights of data</li>
+<li>Recommended solutions to improve data collection process by assuring
+data quality</li>
 </ul>
 <p><strong>reThought Insurance</strong>, Saint Paul, MN</p>
 <p>June 2021-August 2021</p>
 <p><em>Data Science Intern</em></p>
 <ul>
-<li>Leveraged the business objectives to develop or establish success criteria metrics to attract more than 15 million investments and meet client needs of diverse high-limit flood coverage</li>
-<li>Utilized current models and SQL server to extract and manage relevant data which current team of 5 use and for future usage</li>
-<li>Completed analytical projects that provided data-driven and machine learning solutions to create new models in R and made them available through Shiny dashboard to foster more successful collaboration between the data science team and the broker team</li>
-<li>Transferred codes and models to JuliaStats and GitLab to feed information into the larger operation system of the company</li>
+<li>Leveraged the business objectives to develop or establish success
+criteria metrics to attract more than 15 million investments and meet
+client needs of diverse high-limit flood coverage</li>
+<li>Utilized current models and SQL server to extract and manage
+relevant data which current team of 5 use and for future usage</li>
+<li>Completed analytical projects that provided data-driven and machine
+learning solutions to create new models in R and made them available
+through Shiny dashboard to foster more successful collaboration between
+the data science team and the broker team</li>
+<li>Transferred codes and models to JuliaStats and GitLab to feed
+information into the larger operation system of the company</li>
 </ul>
 <h2 id="academic-experience">Academic Experience</h2>
-<p><strong>Macalester College MSCS Department</strong>, Saint Paul, MN</p>
-<p>September 2020-Present</p>
-<p><em>Teaching Assistant for Computational Biology, Probability, and Statistical Machine Learning</em></p>
+<p><strong>Macalester College MSCS Department</strong>, Saint Paul,
+MN</p>
+<p>September 2020-May 2022</p>
+<p><em>Teaching Assistant for Computational Biology, Probability,
+Database Management, and Statistical Machine Learning</em></p>
 <ul>
-<li>Work with students to review their code, identify errors, and suggest better methods for effectiveness to lay the foundation for further study</li>
-<li>Communicate feedback with professors regarding student learning and grading strategies to enhance learning and teaching experience</li>
-<li>Assess and grade weekly assignments for approximately 40 students to provide feedback to students</li>
+<li>Worked with students to review their code, identify errors, and
+suggest better methods for effectiveness to lay the foundation for
+further study</li>
+<li>Communicated feedback with professors regarding student learning and
+grading strategies to enhance learning and teaching experience</li>
+<li>Assessed and graded weekly assignments for approximately 40 students
+to provide feedback to students</li>
 </ul>
 <p><strong>Macalester College</strong>, Saint Paul, MN</p>
 <p>March 2021</p>
 <p><em>DataFest Participant</em></p>
 <ul>
 <li>Awarded best use of external data out of 13 teams</li>
-<li>Explored and analyzed data and presented the model and outputs in 4 days</li>
+<li>Explored and analyzed data and presented the model and outputs in 4
+days</li>
 </ul>
 <p><strong>Macalester College</strong>, Saint Paul, MN</p>
 <p>January 2021</p>
 <p><em>MacExplore Participant</em></p>
 <ul>
-<li>Selected for campus-wide (more than 2000 students) team-based competition to create public health solutions for Alight</li>
-<li>Examine community case to propose and present a creative and feasible solution</li>
+<li>Selected for campus-wide (more than 2000 students) team-based
+competition to create public health solutions for Alight</li>
+<li>Examine community case to propose and present a creative and
+feasible solution</li>
 </ul>
 <p><strong>Kaggle Research Code Competition</strong>, Saint Paul, MN</p>
 <p>October 2020-November 2020</p>
 <p><em>Team Leader</em></p>
 <ul>
-<li>Awarded silver medal in Mechanisms of Action (MoA) Prediction out of 4,373 teams</li>
-<li>Divided the work into parts and distributed to members with clear and detailed directions based on interest and strength</li>
-<li>Analyzed given dataset with more than 20000 rows and more than 2000 columns and used the model to predict categories of potential medicines through CNN and TabNet models</li>
+<li>Awarded silver medal in Mechanisms of Action (MoA) Prediction out of
+4,373 teams</li>
+<li>Divided the work into parts and distributed to members with clear
+and detailed directions based on interest and strength</li>
+<li>Analyzed given dataset with more than 20000 rows and more than 2000
+columns and used the model to predict categories of potential medicines
+through CNN and TabNet models</li>
 </ul>
 <h2 id="extra-curriculum-activities">Extra-curriculum Activities</h2>
-<p><strong>Macalester African Music Ensemble</strong>, Saint Paul, MN</p>
-<p>January 2020-Present</p>
+<p><strong>Macalester African Music Ensemble</strong>, Saint Paul,
+MN</p>
+<p>January 2020-May 2022</p>
 <p><em>Co-manager</em></p>
 <ul>
-<li>Act as a primary liaison communicating schedule and instructor requirements to members to make sure healthy and efficient interaction</li>
-<li>Manage ensemble fund by analyzing spending to ensure it remains on budget and for better usage</li>
-<li>Brainstorm ideas for ensemble recruitment and activities for community building</li>
+<li>Acted as a primary liaison communicating schedule and instructor
+requirements to members to make sure healthy and efficient
+interaction</li>
+<li>Managed ensemble fund by analyzing spending to ensure it remains on
+budget and for better usage</li>
+<li>Brainstormed ideas for ensemble recruitment and activities for
+community building</li>
 </ul>
-<p><strong>Jie Ming Mandarin Immersion Academy</strong>, Saint Paul, MN</p>
+<p><strong>Jie Ming Mandarin Immersion Academy</strong>, Saint Paul,
+MN</p>
 <p>September 2018-May 2019</p>
 <p><em>Volunteer</em></p>
 <ul>
-<li>Prepared materials for in-class activities and graded assignments</li>
-<li>Enhanced student learning by working one-on-one to review their homework with any Mandarin or Math questions</li>
+<li>Prepared materials for in-class activities and graded
+assignments</li>
+<li>Enhanced student learning by working one-on-one to review their
+homework with any Mandarin or Math questions</li>
 </ul>
 <h2 id="skills">Skills</h2>
 <p><strong>Programming:</strong> R, Python, Java, SQL, JuliaStats</p>
-<p><strong>Language:</strong> Fluent Mandarin Chinese, Intermediate Korean, Elementary German</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<p><strong>Language:</strong> Fluent Mandarin Chinese, Intermediate
+Korean, Elementary German</p>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>
